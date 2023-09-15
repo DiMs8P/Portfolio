@@ -1,10 +1,40 @@
-import React from 'react'
+"use client";
+import React, {useState} from 'react'
 import GithubIcon from '../../public/github-icon.svg'
 import LinkedInIcon from '../../public/linkedin-icon.svg'
 import Link from 'next/link'
 import Image from 'next/image'
 
 const Email = () => {
+    const [emailSubmitted, setEmailSubmitted] = useState(false);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const data = {
+            email: e.target.email.value,
+            subject: e.target.subject.value,
+            message: e.target.message.value
+        }
+
+        const JSONdata = JSON.stringify(data);
+        const endpoint = "/api/send";
+
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSONdata
+        }
+
+        const response = await fetch(endpoint, options);
+        const resData = await response.json();
+        console.log(resData);
+
+        if (response.status === 200){
+            console.log("Message sent.");
+            setEmailSubmitted(true);
+        }
+    }
   return (
     <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative'>
 {/*        <div className='bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]
@@ -30,7 +60,7 @@ const Email = () => {
             </div>
         </div>
         <div>
-            <form className='flex flex-col'>
+            <form className='flex flex-col' onSubmit={handleSubmit}>
                 <div className='mb-6'>
                     <label
                         htmlFor='email'
@@ -39,6 +69,7 @@ const Email = () => {
                         Your email
                     </label>
                     <input
+                        name="email"
                         type='email'
                         id='email'
                         required
@@ -55,7 +86,8 @@ const Email = () => {
                         Subject
                     </label>
                     <input
-                        type='email'
+                        name="subject"
+                        type='text'
                         id='subject'
                         required
                         className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
@@ -85,6 +117,13 @@ const Email = () => {
                 >
                     Send Message
                 </button>
+                {
+                    emailSubmitted && (
+                        <p className='text-green-500 text-sm mt-2'>
+                            Email sent successfully!
+                        </p>
+                    )
+                }
             </form>
         </div>
     </section>
