@@ -15,6 +15,9 @@ const Email = () => {
             message: e.target.message.value
         }
 
+        setEmailSubmitted(false);
+        console.log(data.email, data.subject, data.message)
+
         const JSONdata = JSON.stringify(data);
         const endpoint = "/api/send";
 
@@ -25,7 +28,7 @@ const Email = () => {
             },
             body: JSONdata
         }
-
+        console.log(JSONdata);
         const response = await fetch(endpoint, options);
         const resData = await response.json();
         console.log(resData);
@@ -105,6 +108,8 @@ const Email = () => {
                     <textarea
                         name='message'
                         id='message'
+                        rows={5}
+                        required
                         className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
                     text-gray-100 text-sm rounded-lg block w-full p-2.5'
                         placeholder="Let's talk about"
