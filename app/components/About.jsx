@@ -65,6 +65,7 @@ const About = () => {
                       alt='AboutImage'
                       width={500}
                       height={500}
+                      className='rounded-[30px]'
                   />
                   <div className='mt-4 lg:ml-5 md:mt-0 text-[17px] leading-[30px] text-left flex flex-col h-full'>
                       <p>
