@@ -28,7 +28,7 @@ const Navbar = () => {
 
     return (
         <nav className={`${ styles.paddingX } w-full flex-row fixed top-0 py-3 z-20 bg-[#121212] border-b border-gray-200 dark:border-gray-600`}>
-            <div className='max-w-screen-lg flex justify-between items-center mx-auto'>
+            <div className='lg:max-w-[1400px] max-w-screen-lg flex justify-between items-center mx-auto'>
                 <Link href={"/"} className='text-5xl text-white font-semibold'>
                     <Image
                         src={AboutImage}
