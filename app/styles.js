@@ -6,12 +6,17 @@ const styles = {
     heroHeadText:
         "font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2",
     heroSubText:
-        "text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
+        "bg-gradient-to-r text-transparent bg-clip-text from-cyan-300 to-blue-400text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
 
     sectionHeadText:
         "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
     sectionSubText:
         "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
+
+    buttonStyle:
+        "bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500\n" +
+        "                        hover:from-teal-600 hover:via-cyan-600 hover:to-blue-600\n" +
+        "                        hover:bg-slate-100",
 };
 
 export { styles };

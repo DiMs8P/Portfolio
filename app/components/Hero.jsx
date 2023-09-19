@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import HeroImage from "../../src/github-icon.svg";
 import { TypeAnimation } from "react-type-animation";
+import {styles} from "../styles";
 
 const Hero = () => {
   return (
@@ -33,10 +34,8 @@ const Hero = () => {
                 </p>
                 <div>
                     <button
-                        className='px-6 py-3 w-full sm:w-fit rounded-full mr-4
-                        bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500
-                        hover:from-teal-600 hover:via-cyan-600 hover:to-blue-600
-                        hover:bg-slate-100 text-white'
+                        className={`px-6 py-3 w-full sm:w-fit rounded-full mr-4
+                         ${styles.buttonStyle} text-white`}
                     >
                         Hire Me
                     </button>

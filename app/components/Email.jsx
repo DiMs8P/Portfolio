@@ -122,10 +122,8 @@ const Email = () => {
                       </div>
                       <button
                           type='submit'
-                          className='bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500
-                          hover:from-teal-600 hover:via-cyan-600 hover:to-blue-600
-                          text-white font-medium py-2.5
-                    px-5 rounded-lg w-full'
+                          className={`${styles.buttonStyle} text-white font-medium py-2.5
+                    px-5 rounded-lg w-full`}
                       >
                           Send Message
                       </button>
