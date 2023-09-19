@@ -47,7 +47,7 @@ const Email = () => {
               <p className={`${styles.sectionSubText} `}>I&apos;m waiting for your respond</p>
               <h2 className={`${styles.sectionHeadText}`}>Contact me.</h2>
           </motion.div>
-          <section className='grid md:grid-cols-2 my-12 md:my-12 gap-4 relative'>
+          <section className='grid md:grid-cols-2 my-12 gap-4 relative'>
               <div>
                   <h5 className='text-xl font-bold'>
                       Get in touch
