@@ -1,6 +1,6 @@
 "use client";
 import React, {useState} from 'react'
-import Link from "next/link";
+import {Link, animateScroll as scroll} from "react-scroll";
 import Image from "next/image";
 import NavLink from "./NavLink";
 import MenuOverlay from "./MenuOverlay";
@@ -11,15 +11,19 @@ import logoImage from "@/src/logo_h.png";
 const navLinks = [
     {
         title: "About",
-        path: "#about",
+        targetId: "about",
+    },
+    {
+        title: "Experience",
+        targetId: "experience",
     },
     {
         title: "Projects",
-        path: "#projects",
+        targetId: "projects",
     },
     {
         title: "Contact",
-        path: "#contact",
+        targetId: "contact",
     }
 ]
 
@@ -29,11 +33,13 @@ const Navbar = () => {
     return (
         <nav className={`${ styles.paddingX } w-full flex-row fixed top-0 py-3 z-20 bg-[#121212] border-b border-gray-200 dark:border-gray-600`}>
             <div className='lg:max-w-[1400px] max-w-screen-lg flex justify-between items-center mx-auto'>
-                <Link href={"/"} className='text-5xl text-white font-semibold'>
+                <Link
+                    className='cursor-pointer text-5xl text-white font-semibold'>
                     <Image
                         src={logoImage}
                         alt='AboutImage'
                         className='w-[125px] h-[38.5px]'
+                        onClick={() => scroll.scrollToTop()}
                     />
                 </Link>
                 <div className='mobile-menu block md:hidden'>
@@ -60,7 +66,7 @@ const Navbar = () => {
                         {
                             navLinks.map((link, index) => (
                                 <li key = {index}>
-                                    <NavLink href={link.path} title={link.title} />
+                                    <NavLink targetId={link.targetId} title={link.title} />
                                 </li>
                             ))
                         }

@@ -42,7 +42,7 @@ const Email = () => {
         }
     }
   return (
-      <div className='pt-24'>
+      <div id="contact" className='pt-24'>
           <motion.div variants={textVariant()}>
               <p className={`${styles.sectionSubText} `}>I&apos;m waiting for your respond</p>
               <h2 className={`${styles.sectionHeadText}`}>Contact me.</h2>
