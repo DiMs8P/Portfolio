@@ -58,8 +58,8 @@ const About = () => {
           </motion.div>
 
           <section className='text-white'>
-              <div className='md:grid md:grid-cols-2 gap-8 items-center mt-12 px-4
-        xl:gap-16 xl:px-16'>
+              <div className='grid md:grid-cols-2 gap-8 items-center mt-12 px-4
+        xl:gap-16 xl:px-16 relative'>
                   <Image
                       src={AboutImage}
                       alt='AboutImage'
