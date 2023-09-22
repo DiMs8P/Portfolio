@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import HeroImage from "../../src/github-icon.svg";
 import { TypeAnimation } from "react-type-animation";
-import {styles} from "../styles";
+import {styles} from "../[locale]/styles";
 
 const Hero = () => {
   return (

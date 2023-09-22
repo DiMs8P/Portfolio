@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {motion} from "framer-motion";
 import {textVariant} from "@/app/utils/motion";
-import {styles} from "@/app/styles";
+import {styles} from "../[locale]/styles";
 
 const Email = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);

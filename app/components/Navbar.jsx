@@ -1,12 +1,13 @@
 "use client";
-import React, {useState} from 'react'
+import React, {useState, useTransition} from 'react'
 import {Link, animateScroll as scroll} from "react-scroll";
 import Image from "next/image";
 import NavLink from "./NavLink";
 import MenuOverlay from "./MenuOverlay";
-import {styles} from "../styles"
+import {styles} from "../[locale]/styles"
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
 import logoImage from "@/src/logo_h.png";
+import {useTranslations} from "next-intl";
 
 const navLinks = [
     {
@@ -29,7 +30,6 @@ const navLinks = [
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
-
     return (
         <nav className={`${ styles.paddingX } w-full flex-row fixed top-0 py-3 z-20 bg-[#121212] border-b border-gray-200 dark:border-gray-600`}>
             <div className='lg:max-w-[1400px] max-w-screen-lg flex justify-between items-center mx-auto'>

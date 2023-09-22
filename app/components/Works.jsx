@@ -3,7 +3,7 @@ import React from "react";
 import Tilt from 'react-parallax-tilt';
 import {motion} from "framer-motion";
 
-import {styles} from "../styles";
+import {styles} from "../[locale]/styles";
 import github from '../../src/github-icon.svg'
 import {projects} from "../data/constants";
 import {fadeIn, textVariant} from "../utils/motion";
