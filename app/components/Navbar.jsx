@@ -2,12 +2,27 @@
 import React, {useState, useTransition} from 'react'
 import {Link, animateScroll as scroll} from "react-scroll";
 import Image from "next/image";
+import BaseLink from "next/link";
 import NavLink from "./NavLink";
 import MenuOverlay from "./MenuOverlay";
 import {styles} from "../[locale]/styles"
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
 import logoImage from "@/src/logo_h.png";
-import {useTranslations} from "next-intl";
+import russianFlag from "@/src/russia.png";
+import unitedStatesFlag from "@/src/united-states.png";
+import {useRouter} from "next-intl/client";
+import {useLocale} from "next-intl";
+
+const LANGUAGE_DATA = [
+    {
+        id: "en",
+        img: unitedStatesFlag
+    },
+    {
+        id: "ru",
+        img: russianFlag
+    }
+]
 
 const navLinks = [
     {
@@ -30,6 +45,9 @@ const navLinks = [
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const router = useRouter();
+    const locale = useLocale();
+
     return (
         <nav className={`${ styles.paddingX } w-full flex-row fixed top-0 py-3 z-20 bg-[#121212] border-b border-gray-200 dark:border-gray-600`}>
             <div className='lg:max-w-[1400px] max-w-screen-lg flex justify-between items-center mx-auto'>
@@ -71,6 +89,18 @@ const Navbar = () => {
                                 </li>
                             ))
                         }
+                        <BaseLink href='/'>
+                            <Image
+                                src={LANGUAGE_DATA.find((t) => t.id === locale).img}
+                                alt='AboutImage'
+                                className='w-[30px] h-[30px]'
+                                onClick={() => {
+                                    locale === "en" ?
+                                        router.replace('/ru', {locale: 'ru'}) :
+                                        router.replace('/en', {locale: 'en'})
+                                }}
+                            />
+                        </BaseLink>
                     </ul>
                 </div>
             </div>

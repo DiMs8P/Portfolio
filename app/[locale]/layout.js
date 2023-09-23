@@ -1,6 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import {NextIntlClientProvider, useLocale} from 'next-intl';
+import {NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -11,7 +11,7 @@ export const metadata = {
 }
 
 export function generateStaticParams() {
-    return [{locale: 'en'}, {locale: 'ru'}];
+    return [{locale: 'en'}, {locale: 'ru'}, {locale: 'default'}];
 }
 
 export default async function RootLayout({ children, params: {locale}}) {
