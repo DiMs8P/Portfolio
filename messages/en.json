@@ -7,11 +7,32 @@
   },
 
   "HeroSection": {
-    "title": "Hello world!"
+    "Introduction": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    "HireButton": "Hire Me",
+    "CVButton": "Download CV"
   },
 
   "AboutSection": {
-    "title": "Hello world!"
+    "SubText": "My story",
+    "HeadText": "About me.",
+    "AboutText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi, asperiores aspernatur blanditiis consectetur culpa deserunt distinctio dolor, illo magni nostrum possimus quisquam reiciendis sequi sint sunt temporibus ut veritatis.",
+    "TabData": {
+      "Skills": {
+        "Title": "Skills"
+      },
+      "Education": {
+        "Title": "Education",
+        "University": "Novosibirsk State Technical University. Faculty of Applied Mathematics and Computer Science (I am a fourth-year student)",
+        "Udemy": {
+          "FirstShooter": "My first acquaintance with Unreal Engine",
+          "Multiplayer": "Only multiplayer part (Unreal Engine)",
+          "Unity": "Only Laser Defender project (Unity)"
+        }
+      },
+      "Certifications": {
+        "Title": "Certifications"
+      }
+    }
   },
 
   "ExperienceSection": {

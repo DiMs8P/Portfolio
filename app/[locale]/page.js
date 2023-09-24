@@ -1,6 +1,6 @@
 import HeroSection from "./../components/Hero";
 import Navbar from "../components/navbar/Navbar";
-import AboutSection from "./../components/About";
+import AboutSection from "../components/about/About";
 import WorkSection from "./../components/Experience";
 import ProjectSection from "./../components/Works";
 import EmailSection from "./../components/email/Email";

@@ -1,15 +1,17 @@
 "use client"
 import React, {useTransition, useState} from 'react'
 import Image from 'next/image'
-import AboutImage from '../../src/images/about-image.png'
+import AboutImage from '../../../src/images/about-image.png'
 import TabButton from "./TabButton";
 import {motion} from "framer-motion";
 import {textVariant} from "@/app/utils/motion";
-import {styles} from "../[locale]/styles";
-import {TAB_DATA} from "../constants/about";
+import {styles} from "../../[locale]/styles";
+import {getTabData} from "./constants";
+import {useTranslations} from "next-intl";
 const About = () => {
     const [tab, setTab] = useState("skills");
     const [isPending, startTransition] = useTransition();
+    const t = useTranslations("AboutSection");
 
     const handleTabChange = (id)  => {
         startTransition(() => {
@@ -20,8 +22,8 @@ const About = () => {
   return (
       <div id="about" className='pt-24'>
           <motion.div variants={textVariant()}>
-              <p className={`${styles.sectionSubText}`}>My story</p>
-              <h2 className={`${styles.sectionHeadText}`}>About me.</h2>
+              <p className={`${styles.sectionSubText}`}>{t("SubText")}</p>
+              <h2 className={`${styles.sectionHeadText}`}>{t("HeadText")}</h2>
           </motion.div>
 
           <section className='text-white'>
@@ -36,34 +38,31 @@ const About = () => {
                   />
                   <div className='mt-4 lg:ml-5 md:mt-0 text-[17px] leading-[30px] text-left flex flex-col h-full'>
                       <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          Accusamus animi, asperiores aspernatur blanditiis consectetur
-                          culpa deserunt distinctio dolor, illo magni nostrum possimus
-                          quisquam reiciendis sequi sint sunt temporibus ut veritatis.
+                          {t("AboutText")}
                       </p>
                       <div className='flex flex-row justify-start mt-8'>
                           <TabButton
                               selectTab={() => handleTabChange("skills")}
                               active={tab === 'skills'}
                           >
-                              Skills
+                              {t("TabData.Skills.Title")}
                           </TabButton>
                           <TabButton
                               selectTab={() => handleTabChange("education")}
                               active={tab === 'education'}
                           >
-                              Education
+                              {t("TabData.Education.Title")}
                           </TabButton>
-                          <TabButton
+                          {/*<TabButton
                               selectTab={() => handleTabChange("certifications")}
                               active={tab === 'certifications'}
                           >
-                              Certifications
-                          </TabButton>
+                              {t("TabData.Certifications.Title")}
+                          </TabButton>*/}
                       </div>
                       <div className='mt-8'>
                           {
-                              TAB_DATA.find((t) => t.id === tab).content
+                              getTabData(useTranslations("AboutSection.TabData")).find((t) => t.id === tab).content
                           }
                       </div>
                   </div>

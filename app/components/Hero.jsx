@@ -4,8 +4,10 @@ import Image from "next/image";
 import HeroImage from "../../src/github-icon.svg";
 import { TypeAnimation } from "react-type-animation";
 import {styles} from "../[locale]/styles";
+import {useTranslations} from "next-intl";
 
 const Hero = () => {
+    const t = useTranslations("HeroSection");
   return (
     <section>
         <div className='grid md:grid-cols-2'>
@@ -31,22 +33,21 @@ const Hero = () => {
                     </TypeAnimation>
                 </h1>
                 <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quisquam, voluptatum.
+                    {t("Introduction")}
                 </p>
                 <div>
                     <button
                         className={`px-6 py-3 w-full sm:w-fit rounded-full mr-4
                          ${styles.buttonStyle} text-white`}
                     >
-                        Hire Me
+                        {t("HireButton")}
                     </button>
                     <button
                         className='px-1 py-1 w-full sm:w-fit rounded-full
                         bg-gradient-to-br from-teal-500 via-cyan-500
                         to-blue-500 hover:bg-slate-800 mt-3'
                     >
-                        <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>Download CV</span>
+                        <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>{t("CVButton")}</span>
                     </button>
                 </div>
             </div>
