@@ -1,7 +1,8 @@
 "use client";
 import React, {useState} from 'react'
 import GithubIcon from '../../../src/github-icon.svg'
-import LinkedInIcon from '../../../src/linkedin-icon.svg'
+import VkIcon from '../../../src/vk.png'
+import TelegramIcon from '../../../src/telegram.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import {motion} from "framer-motion";
@@ -58,13 +59,17 @@ const Email = () => {
                   <p className='mt-3 text-secondary text-[17px] leading-[30px] mb-5 lg:mr-5 max-w-md'>
                       {t("EmailText")}
                   </p>
-                  <div className='socials flex flex-row gap-2'>
-                      <Link href='github.com'>
-                          <Image src={GithubIcon} alt='GithubIcon'/>
+                  <div className='socials flex flex-row gap-4'>
+                      <Link href='https://github.com/DiMs8P'>
+                          <Image src={GithubIcon} alt='GithubIcon' className='max-h-[48px] max-w-[48px]'/>
                       </Link>
-                      <Link href='linkedin.com'>
-                          <Image src={LinkedInIcon} alt='LinkedInIcon'/>
+                      <Link href='https://vk.com/dimsp'>
+                          <Image src={VkIcon} alt='GithubIcon' className='max-h-[48px] max-w-[48px]'/>
                       </Link>
+                      <Link href='https://t.me/DiMsP'>
+                          <Image src={TelegramIcon} alt='GithubIcon' className='max-h-[48px] max-w-[48px]'/>
+                      </Link>
+
                   </div>
               </div>
               <div>

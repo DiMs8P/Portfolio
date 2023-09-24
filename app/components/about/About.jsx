@@ -1,7 +1,7 @@
 "use client"
 import React, {useTransition, useState} from 'react'
 import Image from 'next/image'
-import AboutImage from '../../../src/images/about-image.png'
+import AboutImage from "../../../src/github-icon.svg";
 import TabButton from "./TabButton";
 import {motion} from "framer-motion";
 import {textVariant} from "../../../app/utils/motion";

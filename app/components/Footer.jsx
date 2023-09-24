@@ -14,10 +14,10 @@ const Footer = () => {
           />
         <p className='text-slate-600'>
             <a
-                href="https://www.flaticon.com/free-icons/flag"
+                href="https://www.flaticon.com/"
                 title="idea icons"
             >
-                Flag icons created by Freepik - Flaticon
+                Icons created by Freepik - Flaticon
             </a>
         </p>
       </div>
