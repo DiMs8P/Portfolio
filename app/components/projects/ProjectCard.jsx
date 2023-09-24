@@ -1,8 +1,8 @@
 import {motion} from "framer-motion";
-import {fadeIn} from "@/app/utils/motion";
+import {fadeIn} from "../../../app/utils/motion";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
-import github from "@/src/github-icon.svg";
+import github from "../../../src/github-icon.svg";
 
 const ProjectCard = ({
                          index,

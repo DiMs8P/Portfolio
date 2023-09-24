@@ -6,9 +6,9 @@ import NavLink from "./NavLink";
 import MenuOverlay from "./MenuOverlay";
 import {styles} from "../../[locale]/styles"
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
-import logoImage from "@/src/logo_h.png";
+import logoImage from "../../../src/logo_h.png";
 import {useTranslations} from "next-intl";
-import ChangeLanguageButton from "@/app/components/navbar/ChangeLanguageButton";
+import ChangeLanguageButton from "../../../app/components/navbar/ChangeLanguageButton";
 import {generateNavLinks} from "./constants";
 
 const Navbar = () => {

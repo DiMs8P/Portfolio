@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 import {styles} from "../[locale]/styles"
-import logoImage from "@/src/logo_h.png";
+import logoImage from "../../src/logo_h.png";
 
 const Footer = () => {
   return (

@@ -5,7 +5,7 @@ import LinkedInIcon from '../../../src/linkedin-icon.svg'
 import Link from 'next/link'
 import Image from 'next/image'
 import {motion} from "framer-motion";
-import {textVariant} from "@/app/utils/motion";
+import {textVariant} from "../../../app/utils/motion";
 import {styles} from "../../[locale]/styles";
 import {useTranslations} from "next-intl";
 

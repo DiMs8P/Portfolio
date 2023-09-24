@@ -4,7 +4,7 @@ import Image from 'next/image'
 import AboutImage from '../../../src/images/about-image.png'
 import TabButton from "./TabButton";
 import {motion} from "framer-motion";
-import {textVariant} from "@/app/utils/motion";
+import {textVariant} from "../../../app/utils/motion";
 import {styles} from "../../[locale]/styles";
 import {getTabData} from "./constants";
 import {useTranslations} from "next-intl";

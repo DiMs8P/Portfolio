@@ -1,4 +1,4 @@
-import GithubIcon from "@/src/github-icon.svg";
+import GithubIcon from "../../../src/github-icon.svg";
 
 const projects = (t) => {
     return [
