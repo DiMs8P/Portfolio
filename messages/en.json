@@ -82,9 +82,5 @@
       "SuccessSend": "Email sent successfully!",
       "FailedSend": "Something went wrong, but you can use social media!"
     }
-  },
-
-  "Footer": {
-    "title": "Hello world!"
   }
 }
