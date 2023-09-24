@@ -6,16 +6,18 @@ import {LANGUAGE_DATA} from "./constants";
 
 const ChangeLanguageButton = () => {
     const locale = useLocale();
-    const newPath = locale === "en" ? "/".concat("ru") : "/".concat("en")
+    const newPath = locale === "en" ? "ru" : "en";
 
   return (
-      <Link href={newPath}>
-          <Image
-              src={LANGUAGE_DATA.find((t) => t.id === locale).img}
-              alt='AboutImage'
-              className='w-[30px] h-[30px]'
-          />
-      </Link>
+      <Image
+          src={LANGUAGE_DATA.find((t) => t.id === locale).img}
+          alt='AboutImage'
+          className='cursor-pointer w-[30px] h-[30px]'
+          onClick={() => {
+              /*TODO routing breaks lineColor on VerticalTimeline :(*/
+              window.location.pathname = newPath;
+          }}
+      />
   )
 }
 
