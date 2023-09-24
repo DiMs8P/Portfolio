@@ -1,5 +1,32 @@
 {
-  "Index": {
-    "title": "Привет мир!"
+  "Navbar": {
+    "About": "О себе",
+    "Experience": "Опыт",
+    "Projects": "Проекты",
+    "Contact": "Связь"
+  },
+
+  "HeroSection": {
+    "title": "Hello world!"
+  },
+
+  "AboutSection": {
+    "title": "Hello world!"
+  },
+
+  "ExperienceSection": {
+    "title": "Hello world!"
+  },
+
+  "ProjectsSection": {
+    "title": "Hello world!"
+  },
+
+  "EmailSection": {
+    "title": "Hello world!"
+  },
+
+  "Footer": {
+    "title": "Hello world!"
   }
 }

@@ -1,5 +1,32 @@
 {
-  "Index": {
+  "Navbar": {
+    "About": "About",
+    "Experience": "Experience",
+    "Projects": "Projects",
+    "Contact": "Contact"
+  },
+
+  "HeroSection": {
+    "title": "Hello world!"
+  },
+
+  "AboutSection": {
+    "title": "Hello world!"
+  },
+
+  "ExperienceSection": {
+    "title": "Hello world!"
+  },
+
+  "ProjectsSection": {
+    "title": "Hello world!"
+  },
+
+  "EmailSection": {
+    "title": "Hello world!"
+  },
+
+  "Footer": {
     "title": "Hello world!"
   }
 }

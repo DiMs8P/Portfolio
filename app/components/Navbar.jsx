@@ -1,52 +1,41 @@
 "use client";
-import React, {useState, useTransition} from 'react'
+import React, {useState} from 'react'
 import {Link, animateScroll as scroll} from "react-scroll";
 import Image from "next/image";
-import BaseLink from "next/link";
 import NavLink from "./NavLink";
 import MenuOverlay from "./MenuOverlay";
 import {styles} from "../[locale]/styles"
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
 import logoImage from "@/src/logo_h.png";
-import russianFlag from "@/src/russia.png";
-import unitedStatesFlag from "@/src/united-states.png";
-import {useRouter} from "next-intl/client";
-import {useLocale} from "next-intl";
+import {useTranslations} from "next-intl";
+import ChangeLanguageButton from "@/app/components/ChangeLanguageButton";
 
-const LANGUAGE_DATA = [
-    {
-        id: "en",
-        img: unitedStatesFlag
-    },
-    {
-        id: "ru",
-        img: russianFlag
-    }
-]
-
-const navLinks = [
-    {
-        title: "About",
-        targetId: "about",
-    },
-    {
-        title: "Experience",
-        targetId: "experience",
-    },
-    {
-        title: "Projects",
-        targetId: "projects",
-    },
-    {
-        title: "Contact",
-        targetId: "contact",
-    }
-]
+const generateNavLinks = (t) => {
+    return [
+        {
+            title: t("About"),
+            targetId: "about",
+        },
+        {
+            title: t("Experience"),
+            targetId: "experience",
+        },
+        {
+            title: t("Projects"),
+            targetId: "projects",
+        },
+        {
+            title: t("Contact"),
+            targetId: "contact",
+        }
+    ];
+}
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
-    const router = useRouter();
-    const locale = useLocale();
+    const t = useTranslations("Navbar");
+
+    const navLinks = generateNavLinks(t);
 
     return (
         <nav className={`${ styles.paddingX } w-full flex-row fixed top-0 py-3 z-20 bg-[#121212] border-b border-gray-200 dark:border-gray-600`}>
@@ -89,18 +78,7 @@ const Navbar = () => {
                                 </li>
                             ))
                         }
-                        <BaseLink href='/'>
-                            <Image
-                                src={LANGUAGE_DATA.find((t) => t.id === locale).img}
-                                alt='AboutImage'
-                                className='w-[30px] h-[30px]'
-                                onClick={() => {
-                                    locale === "en" ?
-                                        router.replace('/ru', {locale: 'ru'}) :
-                                        router.replace('/en', {locale: 'en'})
-                                }}
-                            />
-                        </BaseLink>
+                    <ChangeLanguageButton/>
                     </ul>
                 </div>
             </div>
