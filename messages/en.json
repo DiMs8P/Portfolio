@@ -62,7 +62,26 @@
   },
 
   "EmailSection": {
-    "title": "Hello world!"
+    "SubText": "I'm waiting for your respond",
+    "HeadText": "Contact me.",
+    "GetInTouch": "Get in touch",
+    "EmailText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid facere hic iste nihil quos, sequi. Culpa, distinctio, eaque eius illum ipsam libero, minus nulla numquam perferendis ratione temporibus unde voluptatum!",
+    "Form": {
+      "Email": {
+        "Title": "Email"
+      },
+      "Subject": {
+        "Title": "Subject",
+        "Example": "Just saying hi!"
+      },
+      "Message": {
+        "Title": "Message",
+        "Example": "Let's talk about"
+      },
+      "SendButton": "Send Message",
+      "SuccessSend": "Email sent successfully!",
+      "FailedSend": "Something went wrong, but you can use social media!"
+    }
   },
 
   "Footer": {

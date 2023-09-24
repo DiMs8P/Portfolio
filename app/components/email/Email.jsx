@@ -7,9 +7,13 @@ import Image from 'next/image'
 import {motion} from "framer-motion";
 import {textVariant} from "@/app/utils/motion";
 import {styles} from "../../[locale]/styles";
+import {useTranslations} from "next-intl";
+
+let EmailStatuses = { SUCCESS: 'success', FAILED: 'failed', WAITING: 'waiting' }
 
 const Email = () => {
-    const [emailSubmitted, setEmailSubmitted] = useState(false);
+    const t = useTranslations("EmailSection");
+    const [EmailStatus, setEmailStatus] = useState(EmailStatuses.WAITING);
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = {
@@ -18,8 +22,7 @@ const Email = () => {
             message: e.target.message.value
         }
 
-        setEmailSubmitted(false);
-        console.log(data.email, data.subject, data.message)
+        setEmailStatus(EmailStatuses.WAITING);
 
         const JSONdata = JSON.stringify(data);
         const endpoint = "/api/send";
@@ -31,32 +34,29 @@ const Email = () => {
             },
             body: JSONdata
         }
-        console.log(JSONdata);
         const response = await fetch(endpoint, options);
-        const resData = await response.json();
-        console.log(resData);
 
         if (response.status === 200){
-            console.log("Message sent.");
-            setEmailSubmitted(true);
+            setEmailStatus(EmailStatuses.SUCCESS);
+        }
+        else{
+            setEmailStatus(EmailStatuses.FAILED);
         }
     }
+
   return (
       <div id="contact" className='pt-24'>
           <motion.div variants={textVariant()}>
-              <p className={`${styles.sectionSubText} `}>I&apos;m waiting for your respond</p>
-              <h2 className={`${styles.sectionHeadText}`}>Contact me.</h2>
+              <p className={`${styles.sectionSubText} `}>{t("SubText")}</p>
+              <h2 className={`${styles.sectionHeadText}`}>{t("HeadText")}</h2>
           </motion.div>
           <section className='grid md:grid-cols-2 my-12 gap-8 relative'>
               <div>
                   <h5 className='text-xl font-bold'>
-                      Get in touch
+                      {t("GetInTouch")}
                   </h5>
                   <p className='mt-3 text-secondary text-[17px] leading-[30px] mb-5 lg:mr-5 max-w-md'>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Aliquid facere hic iste nihil quos, sequi. Culpa, distinctio,
-                      eaque eius illum ipsam libero, minus nulla numquam perferendis
-                      ratione temporibus unde voluptatum!
+                      {t("EmailText")}
                   </p>
                   <div className='socials flex flex-row gap-2'>
                       <Link href='github.com'>
@@ -74,7 +74,7 @@ const Email = () => {
                               htmlFor='email'
                               className='text-white block mb-2 text-[17px] font-medium'
                           >
-                              Your email
+                              {t("Form.Email.Title")}
                           </label>
                           <input
                               name="email"
@@ -83,7 +83,7 @@ const Email = () => {
                               required
                               className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
                     text-gray-100 text-[17px] rounded-lg block w-full p-2.5'
-                              placeholder='example@google.com'
+                              placeholder="example@google.com"
                           />
                       </div>
                       <div className='mb-6'>
@@ -91,7 +91,7 @@ const Email = () => {
                               htmlFor='subject'
                               className='text-white block mb-2 text-[17px] font-medium'
                           >
-                              Subject
+                              {t("Form.Subject.Title")}
                           </label>
                           <input
                               name="subject"
@@ -100,7 +100,7 @@ const Email = () => {
                               required
                               className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
                     text-gray-100 text-[17px] rounded-lg block w-full p-2.5'
-                              placeholder='Just saying hi'
+                              placeholder={t("Form.Subject.Example")}
                           />
                       </div>
                       <div className='mb-6'>
@@ -108,7 +108,7 @@ const Email = () => {
                               htmlFor='message'
                               className='text-white block mb-2 text-[17px] font-medium'
                           >
-                              Message
+                              {t("Form.Message.Title")}
                           </label>
                           <textarea
                               name='message'
@@ -117,7 +117,7 @@ const Email = () => {
                               required
                               className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
                     text-gray-100 text-[17px] rounded-lg block w-full p-2.5'
-                              placeholder="Let's talk about"
+                              placeholder={t("Form.Message.Example")}
                           />
                       </div>
                       <button
@@ -125,12 +125,19 @@ const Email = () => {
                           className={`${styles.buttonStyle} text-white font-medium py-2.5
                     px-5 rounded-lg w-full`}
                       >
-                          Send Message
+                          {t("Form.SendButton")}
                       </button>
                       {
-                          emailSubmitted && (
+                          EmailStatus === EmailStatuses.SUCCESS && (
                               <p className='text-green-500 text-[17px] mt-2'>
-                                  Email sent successfully!
+                                  {t("Form.SuccessSend")}
+                              </p>
+                          )
+                      }
+                      {
+                          EmailStatus === EmailStatuses.FAILED && (
+                              <p className='text-red-500 text-[17px] mt-2'>
+                                  {t("Form.FailedSend")}
                               </p>
                           )
                       }
