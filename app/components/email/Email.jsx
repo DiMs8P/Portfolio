@@ -1,12 +1,12 @@
 "use client";
 import React, {useState} from 'react'
-import GithubIcon from '../../src/github-icon.svg'
-import LinkedInIcon from '../../src/linkedin-icon.svg'
+import GithubIcon from '../../../src/github-icon.svg'
+import LinkedInIcon from '../../../src/linkedin-icon.svg'
 import Link from 'next/link'
 import Image from 'next/image'
 import {motion} from "framer-motion";
 import {textVariant} from "@/app/utils/motion";
-import {styles} from "../[locale]/styles";
+import {styles} from "../../[locale]/styles";
 
 const Email = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);

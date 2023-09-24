@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {useRouter} from "next-intl/client";
 import {useLocale} from "next-intl";
-import {LANGUAGE_DATA} from "@/app/constants/navbar";
+import {LANGUAGE_DATA} from "./constants";
 
 const ChangeLanguageButton = () => {
     const router = useRouter();

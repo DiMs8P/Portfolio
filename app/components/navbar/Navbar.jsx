@@ -4,12 +4,12 @@ import {Link, animateScroll as scroll} from "react-scroll";
 import Image from "next/image";
 import NavLink from "./NavLink";
 import MenuOverlay from "./MenuOverlay";
-import {styles} from "../[locale]/styles"
+import {styles} from "../../[locale]/styles"
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
 import logoImage from "@/src/logo_h.png";
 import {useTranslations} from "next-intl";
-import ChangeLanguageButton from "@/app/components/ChangeLanguageButton";
-import {generateNavLinks} from "@/app/constants/navbar";
+import ChangeLanguageButton from "@/app/components/navbar/ChangeLanguageButton";
+import {generateNavLinks} from "./constants";
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
