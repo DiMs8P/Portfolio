@@ -1,21 +1,9 @@
 import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
-import unitedStatesFlag from "@/src/united-states.png";
-import russianFlag from "@/src/russia.png";
 import {useRouter} from "next-intl/client";
 import {useLocale} from "next-intl";
-
-const LANGUAGE_DATA = [
-    {
-        id: "en",
-        img: unitedStatesFlag
-    },
-    {
-        id: "ru",
-        img: russianFlag
-    }
-]
+import {LANGUAGE_DATA} from "@/app/constants/navbar";
 
 const ChangeLanguageButton = () => {
     const router = useRouter();

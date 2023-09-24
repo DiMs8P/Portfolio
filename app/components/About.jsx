@@ -6,40 +6,7 @@ import TabButton from "./TabButton";
 import {motion} from "framer-motion";
 import {textVariant} from "@/app/utils/motion";
 import {styles} from "../[locale]/styles";
-
-const TAB_DATA = [
-    {
-        title: "Skills",
-        id: "skills",
-        content: (
-            <ul className='list-disc pl-2'>
-                <li>Node.js</li>
-                <li>Unreal Engine</li>
-                <li>PostgreSQL</li>
-            </ul>
-        )
-    },
-    {
-        title: "Education",
-        id: "education",
-        content: (
-            <ul className='list-disc pl-2'>
-                <li>Trash can(NSTU)</li>
-                <li>Udemy</li>
-            </ul>
-        )
-    },
-    {
-        title: "Certifications",
-        id: "certifications",
-        content: (
-            <ul className='list-disc pl-2'>
-                <li>English</li>
-                <li>Game start finalyst</li>
-            </ul>
-        )
-    }
-]
+import {TAB_DATA} from "../constants/about";
 const About = () => {
     const [tab, setTab] = useState("skills");
     const [isPending, startTransition] = useTransition();

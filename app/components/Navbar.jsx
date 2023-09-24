@@ -9,27 +9,7 @@ import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
 import logoImage from "@/src/logo_h.png";
 import {useTranslations} from "next-intl";
 import ChangeLanguageButton from "@/app/components/ChangeLanguageButton";
-
-const generateNavLinks = (t) => {
-    return [
-        {
-            title: t("About"),
-            targetId: "about",
-        },
-        {
-            title: t("Experience"),
-            targetId: "experience",
-        },
-        {
-            title: t("Projects"),
-            targetId: "projects",
-        },
-        {
-            title: t("Contact"),
-            targetId: "contact",
-        }
-    ];
-}
+import {generateNavLinks} from "@/app/constants/navbar";
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);

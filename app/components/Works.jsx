@@ -2,10 +2,9 @@
 import React from "react";
 import Tilt from 'react-parallax-tilt';
 import {motion} from "framer-motion";
-
 import {styles} from "../[locale]/styles";
 import github from '../../src/github-icon.svg'
-import {projects} from "../data/constants";
+import {projects} from "@/app/constants/works";
 import {fadeIn, textVariant} from "../utils/motion";
 import Image from 'next/image'
 
