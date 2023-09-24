@@ -13,7 +13,12 @@ const Footer = () => {
               className='w-[125px] h-[38.5px]'
           />
         <p className='text-slate-600'>
-            <a href="https://www.flaticon.com/free-icons/flag" title="idea icons">Flag icons created by Freepik - Flaticon</a>
+            <a
+                href="https://www.flaticon.com/free-icons/flag"
+                title="idea icons"
+            >
+                Flag icons created by Freepik - Flaticon
+            </a>
         </p>
       </div>
     </footer>
