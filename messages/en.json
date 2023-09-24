@@ -36,7 +36,19 @@
   },
 
   "ExperienceSection": {
-    "title": "Hello world!"
+    "SubText": "What I have done so far",
+    "HeadText": "Work Experience.",
+    "Experiences": {
+      "DreamVR": {
+        "Date": "January 2023 - August 2023",
+        "Points": {
+          "FirstPoint": "Developing and maintaining web applications using React.js and other related technologies.",
+          "SecondPoint": "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+          "ThirdPoint": "Implementing responsive design and ensuring cross-browser compatibility.",
+          "ForthPoint": "Participating in code reviews and providing constructive feedback to other developers."
+        }
+      }
+    }
   },
 
   "ProjectsSection": {
