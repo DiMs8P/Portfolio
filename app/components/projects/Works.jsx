@@ -1,21 +1,17 @@
 "use client"
 import React from "react";
 import {motion} from "framer-motion";
-import {styles} from "../../[locale]/styles";
 import {projects} from "./constants";
-import {fadeIn, textVariant} from "../../utils/motion";
+import {fadeIn} from "../../utils/motion";
 import {useTranslations} from "next-intl";
 import ProjectCard from "./ProjectCard";
+import SectionHeader from "@/app/components/SectionHeader";
 
 const Works = () => {
     const t = useTranslations("ProjectsSection");
     return (
         <div id="projects" className='pt-24'>
-            <motion.div variants={textVariant()}>
-                <p className={`${styles.sectionSubText} `}>{t("SubText")}</p>
-                <h2 className={`${styles.sectionHeadText}`}>{t("HeadText")}</h2>
-            </motion.div>
-
+            <SectionHeader t={t}/>
             <div className='w-full flex'>
                 <motion.p
                     variants={fadeIn("", "", 0.1, 1)}

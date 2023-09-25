@@ -5,9 +5,9 @@ import AboutImage from "../../../src/github-icon.svg";
 import TabButton from "./TabButton";
 import {motion} from "framer-motion";
 import {fadeIn} from "../../../app/utils/motion";
-import {styles} from "../../[locale]/styles";
 import {getTabData} from "./constants";
 import {useTranslations} from "next-intl";
+import SectionHeader from "../../../app/components/SectionHeader";
 const About = () => {
     const [tab, setTab] = useState("skills");
     const [isPending, startTransition] = useTransition();
@@ -21,27 +21,7 @@ const About = () => {
 
   return (
       <div id="about" className='pt-24'>
-          <div>
-              <motion.p
-                  className={`${styles.sectionSubText}`}
-                  variants={fadeIn('up', 0.3)}
-                  initial='hidden'
-                  whileInView={'show'}
-                  viewport={{ once: true }}
-              >
-                  {t("SubText")}
-              </motion.p>
-              <motion.h2
-                  className={`${styles.sectionHeadText}`}
-                  variants={fadeIn('up', 0.4)}
-                  initial='hidden'
-                  whileInView={'show'}
-                  viewport={{ once: true }}
-              >
-                  {t("HeadText")}
-              </motion.h2>
-          </div>
-
+          <SectionHeader t={t}/>
           <section className='text-white'>
               <div className='grid md:grid-cols-2 gap-8 items-center mt-12 px-4
         xl:gap-16 xl:px-16 relative'>

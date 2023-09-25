@@ -5,10 +5,9 @@ import VkIcon from '../../../src/vk.png'
 import TelegramIcon from '../../../src/telegram.png'
 import Link from 'next/link'
 import Image from 'next/image'
-import {motion} from "framer-motion";
-import {textVariant} from "../../../app/utils/motion";
 import {styles} from "../../[locale]/styles";
 import {useTranslations} from "next-intl";
+import SectionHeader from "@/app/components/SectionHeader";
 
 let EmailStatuses = { SUCCESS: 'success', FAILED: 'failed', WAITING: 'waiting' }
 
@@ -47,10 +46,7 @@ const Email = () => {
 
   return (
       <div id="contact" className='pt-24'>
-          <motion.div variants={textVariant()}>
-              <p className={`${styles.sectionSubText} `}>{t("SubText")}</p>
-              <h2 className={`${styles.sectionHeadText}`}>{t("HeadText")}</h2>
-          </motion.div>
+          <SectionHeader t={t}/>
           <section className='grid md:grid-cols-2 my-12 gap-8 relative'>
               <div>
                   <h5 className='text-xl font-bold'>
