@@ -7,6 +7,7 @@ import {styles} from "../[locale]/styles";
 import {useTranslations} from "next-intl";
 import {fadeIn} from "../../app/utils/motion";
 import {motion} from "framer-motion";
+import AnimationWrapper from "@/app/components/AnimationWrapper";
 
 const Hero = () => {
     const t = useTranslations("HeroSection");
@@ -15,7 +16,7 @@ const Hero = () => {
         <div className='grid md:grid-cols-2'>
             <div className='place-self-center text-center md:text-left'>
                 <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold'>
-                    <motion.div
+                    <AnimationWrapper
                         variants={fadeIn('right', 'tween', 0.3)}
                         initial='hidden'
                         whileInView={'show'}
@@ -26,8 +27,8 @@ const Hero = () => {
                         from-cyan-400 to-blue-600'>Hello, I&apos;m {" "}
                         </span>
                         <br/>
-                    </motion.div>
-                    <motion.div
+                    </AnimationWrapper>
+                    <AnimationWrapper
                         variants={fadeIn('left', 'tween', 0.3)}
                         initial='hidden'
                         whileInView={'show'}
@@ -45,17 +46,16 @@ const Hero = () => {
                             repeat={Infinity}
                         >
                         </TypeAnimation>
-                    </motion.div>
+                    </AnimationWrapper>
                 </h1>
-                <motion.p
+                <AnimationWrapper
                     variants={fadeIn('up', 'tween', 0.4)}
                     initial='hidden'
                     whileInView={'show'}
                     viewport={{ once: true }}
-                    className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'
                 >
-                    {t("Introduction")}
-                </motion.p>
+                    <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'>{t("Introduction")}</p>
+                </AnimationWrapper>
                 <motion.div
                     variants={fadeIn('up', 'tween', 0.5)}
                     initial='hidden'
