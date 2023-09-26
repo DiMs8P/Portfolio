@@ -73,7 +73,7 @@ const Hero = () => {
                         bg-gradient-to-br from-teal-500 via-cyan-500
                         to-blue-500 hover:bg-slate-800 mt-3'
                     >
-                        <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>{t("CVButton")}</span>
+                        <span className='block text-white bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>{t("CVButton")}</span>
                     </button>
                 </AnimationWrapper>
             </div>
