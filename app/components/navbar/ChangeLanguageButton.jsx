@@ -12,7 +12,7 @@ const ChangeLanguageButton = () => {
       <Image
           src={LANGUAGE_DATA.find((t) => t.id === locale).img}
           alt='AboutImage'
-          className='cursor-pointer w-[30px] h-[30px]'
+          className='cursor-pointer h-[30px] w-[30px] md:h-[30px] md:w-[30px]'
           onClick={() => {
               /*TODO routing breaks lineColor on VerticalTimeline :(*/
               window.location.pathname = newPath;

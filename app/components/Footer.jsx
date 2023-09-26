@@ -10,7 +10,7 @@ const Footer = () => {
           <Image
               src={logoImage}
               alt='AboutImage'
-              className='w-[125px] h-[38.5px]'
+              className='md:w-[125px] md:h-[38.5px] w-[100px] h-[30.8px]'
           />
         <p className='text-slate-600'>
             <a

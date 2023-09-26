@@ -26,7 +26,7 @@ const Navbar = () => {
                     <Image
                         src={logoImage}
                         alt='AboutImage'
-                        className='w-[125px] h-[38.5px]'
+                        className='md:w-[125px] md:h-[38.5px] w-[100px] h-[30.8px]'
                         onClick={() => scroll.scrollToTop()}
                     />
                 </Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='menu hidden md:block md:w-auto' id='navbar'>
-                    <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0'>
+                    <ul className='flex flex-row items-center gap-x-8'>
                         {
                             navLinks.map((link, index) => (
                                 <li key = {index}>
