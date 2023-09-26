@@ -1,13 +1,13 @@
 "use client";
 import React, {useState} from 'react'
-import GithubIcon from '../../../src/github-icon.svg'
-import VkIcon from '../../../src/vk.png'
-import TelegramIcon from '../../../src/telegram.png'
-import Link from 'next/link'
-import Image from 'next/image'
 import {styles} from "../../[locale]/styles";
 import {useTranslations} from "next-intl";
-import SectionHeader from "@/app/components/SectionHeader";
+import SectionHeader from "../../../app/components/SectionHeader";
+import {motion} from "framer-motion";
+import {fadeIn} from "../../../app/utils/motion";
+import {socials} from "./constants";
+import Social from "./Social";
+
 
 let EmailStatuses = { SUCCESS: 'success', FAILED: 'failed', WAITING: 'waiting' }
 
@@ -49,26 +49,38 @@ const Email = () => {
           <SectionHeader t={t}/>
           <section className='grid md:grid-cols-2 my-12 gap-8 relative'>
               <div>
-                  <h5 className='text-xl font-bold'>
+                  <motion.h5
+                      variants={fadeIn('right', 'tween', 0.3)}
+                      initial='hidden'
+                      whileInView={'show'}
+                      viewport={{ once: true }}
+                      className='text-xl font-bold'
+                  >
                       {t("GetInTouch")}
-                  </h5>
-                  <p className='mt-3 text-secondary text-[17px] leading-[30px] mb-5 lg:mr-5 max-w-md'>
+                  </motion.h5>
+                  <motion.p
+                      variants={fadeIn('right', 'tween', 0.4)}
+                      initial='hidden'
+                      whileInView={'show'}
+                      viewport={{ once: true }}
+                      className='mt-3 text-secondary text-[17px] leading-[30px] mb-5 lg:mr-5 max-w-md'
+                  >
                       {t("EmailText")}
-                  </p>
+                  </motion.p>
                   <div className='socials flex flex-row gap-4'>
-                      <Link href='https://github.com/DiMs8P'>
-                          <Image src={GithubIcon} alt='GithubIcon' className='max-h-[48px] max-w-[48px]'/>
-                      </Link>
-                      <Link href='https://vk.com/dimsp'>
-                          <Image src={VkIcon} alt='GithubIcon' className='max-h-[48px] max-w-[48px]'/>
-                      </Link>
-                      <Link href='https://t.me/DiMsP'>
-                          <Image src={TelegramIcon} alt='GithubIcon' className='max-h-[48px] max-w-[48px]'/>
-                      </Link>
-
+                      {
+                          socials.map((social, index) => (
+                              <Social key={`social-${index}`} social={social} index={index}/>
+                          ))
+                      }
                   </div>
               </div>
-              <div>
+              <motion.div
+                  variants={fadeIn('left', 'tween', 0.3)}
+                  initial='hidden'
+                  whileInView={'show'}
+                  viewport={{ once: true }}
+              >
                   <form className='flex flex-col' onSubmit={handleSubmit}>
                       <div className='mb-6'>
                           <label
@@ -143,7 +155,7 @@ const Email = () => {
                           )
                       }
                   </form>
-              </div>
+              </motion.div>
           </section>
       </div>
   )

@@ -5,7 +5,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "./constants";
 import {useTranslations} from "next-intl";
 import ExperienceCard from "./ExperienceCard";
-import SectionHeader from "@/app/components/SectionHeader";
+import SectionHeader from "../../../app/components/SectionHeader";
 
 const Experience = () => {
     const t = useTranslations("ExperienceSection");

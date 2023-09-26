@@ -5,7 +5,7 @@ import HeroImage from "../../src/github-icon.svg";
 import { TypeAnimation } from "react-type-animation";
 import {styles} from "../[locale]/styles";
 import {useTranslations} from "next-intl";
-import {fadeIn} from "@/app/utils/motion";
+import {fadeIn} from "../../app/utils/motion";
 import {motion} from "framer-motion";
 
 const Hero = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
             <div className='place-self-center text-center md:text-left'>
                 <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold'>
                     <motion.div
-                        variants={fadeIn('right', 0.3)}
+                        variants={fadeIn('right', 'tween', 0.3)}
                         initial='hidden'
                         whileInView={'show'}
                         viewport={{ once: true }}
@@ -28,7 +28,7 @@ const Hero = () => {
                         <br/>
                     </motion.div>
                     <motion.div
-                        variants={fadeIn('left', 0.3)}
+                        variants={fadeIn('left', 'tween', 0.3)}
                         initial='hidden'
                         whileInView={'show'}
                         viewport={{ once: true }}
@@ -48,7 +48,7 @@ const Hero = () => {
                     </motion.div>
                 </h1>
                 <motion.p
-                    variants={fadeIn('up', 0.4)}
+                    variants={fadeIn('up', 'tween', 0.4)}
                     initial='hidden'
                     whileInView={'show'}
                     viewport={{ once: true }}
@@ -57,7 +57,7 @@ const Hero = () => {
                     {t("Introduction")}
                 </motion.p>
                 <motion.div
-                    variants={fadeIn('up', 0.5)}
+                    variants={fadeIn('up', 'tween', 0.5)}
                     initial='hidden'
                     whileInView={'show'}
                     viewport={{ once: true }}
@@ -80,7 +80,7 @@ const Hero = () => {
             <div className='place-self-center mt-4 lg:mt-0'>
                 <motion.div
                     className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative"
-                    variants={fadeIn('left', 0.3)}
+                    variants={fadeIn('left', 'tween', 0.3)}
                     initial='hidden'
                     whileInView={'show'}
                     viewport={{ once: true }}

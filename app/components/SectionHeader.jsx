@@ -8,7 +8,7 @@ const SectionHeader = ({t}) => {
       <div>
           <motion.p
               className={`${styles.sectionSubText}`}
-              variants={fadeIn('up', 0.3)}
+              variants={fadeIn('up', 'tween', 0.3)}
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: true }}
@@ -17,7 +17,7 @@ const SectionHeader = ({t}) => {
           </motion.p>
           <motion.h2
               className={`${styles.sectionHeadText}`}
-              variants={fadeIn('up', 0.4)}
+              variants={fadeIn('up', 'tween', 0.4)}
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: true }}
