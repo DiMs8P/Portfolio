@@ -7,6 +7,7 @@ import {motion} from "framer-motion";
 import {fadeIn} from "../../../app/utils/motion";
 import {socials} from "./constants";
 import Social from "./Social";
+import AnimationWrapper from "@/app/components/AnimationWrapper";
 
 
 let EmailStatuses = { SUCCESS: 'success', FAILED: 'failed', WAITING: 'waiting' }
@@ -49,24 +50,26 @@ const Email = () => {
           <SectionHeader t={t}/>
           <section className='grid md:grid-cols-2 my-12 gap-8 relative'>
               <div>
-                  <motion.h5
+                  <AnimationWrapper
                       variants={fadeIn('right', 'tween', 0.3)}
                       initial='hidden'
                       whileInView={'show'}
                       viewport={{ once: true }}
-                      className='text-xl font-bold'
                   >
-                      {t("GetInTouch")}
-                  </motion.h5>
-                  <motion.p
+                      <h5 className='text-xl font-bold'>
+                          {t("GetInTouch")}
+                      </h5>
+                  </AnimationWrapper>
+                  <AnimationWrapper
                       variants={fadeIn('right', 'tween', 0.4)}
                       initial='hidden'
                       whileInView={'show'}
                       viewport={{ once: true }}
-                      className='mt-3 text-secondary text-[17px] leading-[30px] mb-5 lg:mr-5 max-w-md'
                   >
-                      {t("EmailText")}
-                  </motion.p>
+                      <p className='mt-3 text-secondary text-[17px] leading-[30px] mb-5 lg:mr-5 max-w-md'>
+                          {t("EmailText")}
+                      </p>
+                  </AnimationWrapper>
                   <div className='socials flex flex-row gap-4'>
                       {
                           socials.map((social, index) => (
@@ -75,7 +78,7 @@ const Email = () => {
                       }
                   </div>
               </div>
-              <motion.div
+              <AnimationWrapper
                   variants={fadeIn('left', 'tween', 0.3)}
                   initial='hidden'
                   whileInView={'show'}
@@ -155,7 +158,7 @@ const Email = () => {
                           )
                       }
                   </form>
-              </motion.div>
+              </AnimationWrapper>
           </section>
       </div>
   )

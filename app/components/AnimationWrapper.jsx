@@ -2,13 +2,14 @@ import React from 'react'
 import {useIsMobile} from "@/app/utils/mobileDetection";
 import {motion} from "framer-motion";
 
-const AnimationWrapper = ({children, variants, initial, whileInView, viewport}) => {
+const AnimationWrapper = ({children, className, variants, initial, whileInView, viewport}) => {
     const isMobile = useIsMobile();
     if (isMobile){
-        return <div>{children}</div>
+        return <div className={className}>{children}</div>
     }
     else{
         return <motion.div
+            className = {className}
             variants={variants}
             initial={initial}
             whileInView={whileInView}

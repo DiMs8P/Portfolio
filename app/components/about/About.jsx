@@ -8,6 +8,7 @@ import {fadeIn} from "../../../app/utils/motion";
 import {getTabData} from "./constants";
 import {useTranslations} from "next-intl";
 import SectionHeader from "../../../app/components/SectionHeader";
+import AnimationWrapper from "@/app/components/AnimationWrapper";
 const About = () => {
     const [tab, setTab] = useState("skills");
     const [isPending, startTransition] = useTransition();
@@ -25,7 +26,7 @@ const About = () => {
           <section className='text-white'>
               <div className='grid md:grid-cols-2 gap-8 items-center mt-12 px-4
         xl:gap-16 xl:px-16 relative'>
-                  <motion.div
+                  <AnimationWrapper
                       variants={fadeIn('right', 'tween', 0.5)}
                       initial='hidden'
                       whileInView={'show'}
@@ -38,8 +39,8 @@ const About = () => {
                           height={500}
                           className='rounded-[30px]'
                       />
-                  </motion.div>
-                  <motion.div
+                  </AnimationWrapper>
+                  <AnimationWrapper
                       variants={fadeIn('left', 'tween', 0.5)}
                       initial='hidden'
                       whileInView={'show'}
@@ -74,7 +75,7 @@ const About = () => {
                               getTabData(useTranslations("AboutSection.TabData")).find((t) => t.id === tab).content
                           }
                       </div>
-                  </motion.div>
+                  </AnimationWrapper>
               </div>
           </section>
       </div>

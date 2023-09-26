@@ -56,7 +56,7 @@ const Hero = () => {
                 >
                     <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'>{t("Introduction")}</p>
                 </AnimationWrapper>
-                <motion.div
+                <AnimationWrapper
                     variants={fadeIn('up', 'tween', 0.5)}
                     initial='hidden'
                     whileInView={'show'}
@@ -75,10 +75,10 @@ const Hero = () => {
                     >
                         <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>{t("CVButton")}</span>
                     </button>
-                </motion.div>
+                </AnimationWrapper>
             </div>
             <div className='place-self-center mt-4 lg:mt-0'>
-                <motion.div
+                <AnimationWrapper
                     className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative"
                     variants={fadeIn('left', 'tween', 0.3)}
                     initial='hidden'
@@ -92,7 +92,7 @@ const Hero = () => {
                         width={300}
                         height={300}
                     />
-                </motion.div>
+                </AnimationWrapper>
             </div>
         </div>
     </section>

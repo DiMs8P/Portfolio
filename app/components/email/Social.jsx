@@ -3,10 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {fadeIn} from "../../../app/utils/motion";
+import AnimationWrapper from "@/app/components/AnimationWrapper";
 
 const Social = ({ social, index }) => {
   return (
-      <motion.div
+      <AnimationWrapper
           variants={fadeIn('right', 'spring', index * 0.5 + 1, 1)}
           initial='hidden'
           whileInView={'show'}
@@ -15,7 +16,7 @@ const Social = ({ social, index }) => {
           <Link href={social.targetLink}>
               <Image src={social.image} alt={social.name} className='max-h-[48px] max-w-[48px]'/>
           </Link>
-      </motion.div>
+      </AnimationWrapper>
   )
 }
 
