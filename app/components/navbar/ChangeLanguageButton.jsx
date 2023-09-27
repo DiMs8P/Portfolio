@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from "next/link";
 import Image from "next/image";
 import {useLocale} from "next-intl";
 import {LANGUAGE_DATA} from "./constants";

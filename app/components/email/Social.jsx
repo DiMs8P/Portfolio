@@ -1,9 +1,8 @@
 import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
-import {motion} from "framer-motion";
 import {fadeIn} from "../../../app/utils/motion";
-import AnimationWrapper from "@/app/components/AnimationWrapper";
+import AnimationWrapper from "../AnimationWrapper";
 
 const Social = ({ social, index }) => {
   return (

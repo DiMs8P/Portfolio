@@ -1,5 +1,5 @@
-import unitedStatesFlag from "@/src/united-states.png";
-import russianFlag from "@/src/russia.png";
+import unitedStatesFlag from "../../../src/united-states.png";
+import russianFlag from "../../../src/russia.png";
 
 const generateNavLinks = (t) => {
     return [

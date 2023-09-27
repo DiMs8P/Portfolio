@@ -5,8 +5,8 @@ import {fadeIn} from "../../utils/motion";
 import {useTranslations} from "next-intl";
 import ProjectCard from "./ProjectCard";
 import SectionHeader from "../../../app/components/SectionHeader";
-import AnimationWrapper from "@/app/components/AnimationWrapper";
-import ProjectTag from "@/app/components/projects/ProjectTag";
+import AnimationWrapper from "../AnimationWrapper";
+import ProjectTag from "./ProjectTag";
 
 const Works = () => {
     const [tag, setTag] = useState("All");

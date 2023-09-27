@@ -6,8 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import {styles} from "../[locale]/styles";
 import {useTranslations} from "next-intl";
 import {fadeIn} from "../../app/utils/motion";
-import {motion} from "framer-motion";
-import AnimationWrapper from "@/app/components/AnimationWrapper";
+import AnimationWrapper from "../../app/components/AnimationWrapper";
 
 const Hero = () => {
     const t = useTranslations("HeroSection");

@@ -1,5 +1,5 @@
 import React from 'react'
-import {useIsMobile} from "@/app/utils/mobileDetection";
+import {useIsMobile} from "../../app/utils/mobileDetection";
 import {motion} from "framer-motion";
 
 const AnimationWrapper = ({children, className, variants, initial, whileInView, viewport}) => {

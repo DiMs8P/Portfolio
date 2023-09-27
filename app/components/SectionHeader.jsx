@@ -1,7 +1,7 @@
 import React from 'react'
 import {styles} from "../../app/[locale]/styles";
 import {fadeIn} from "../../app/utils/motion";
-import AnimationWrapper from "@/app/components/AnimationWrapper";
+import AnimationWrapper from "../../app/components/AnimationWrapper";
 
 const SectionHeader = ({t}) => {
   return (

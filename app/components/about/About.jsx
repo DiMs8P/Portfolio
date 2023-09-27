@@ -3,12 +3,11 @@ import React, {useTransition, useState} from 'react'
 import Image from 'next/image'
 import AboutImage from "../../../src/github-icon.svg";
 import TabButton from "./TabButton";
-import {motion} from "framer-motion";
 import {fadeIn} from "../../../app/utils/motion";
 import {getTabData} from "./constants";
 import {useTranslations} from "next-intl";
 import SectionHeader from "../../../app/components/SectionHeader";
-import AnimationWrapper from "@/app/components/AnimationWrapper";
+import AnimationWrapper from "../AnimationWrapper";
 const About = () => {
     const [tab, setTab] = useState("skills");
     const [isPending, startTransition] = useTransition();

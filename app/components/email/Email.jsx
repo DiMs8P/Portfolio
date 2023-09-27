@@ -3,11 +3,10 @@ import React, {useState} from 'react'
 import {styles} from "../../[locale]/styles";
 import {useTranslations} from "next-intl";
 import SectionHeader from "../../../app/components/SectionHeader";
-import {motion} from "framer-motion";
 import {fadeIn} from "../../../app/utils/motion";
 import {socials} from "./constants";
 import Social from "./Social";
-import AnimationWrapper from "@/app/components/AnimationWrapper";
+import AnimationWrapper from "../AnimationWrapper";
 
 
 let EmailStatuses = { SUCCESS: 'success', FAILED: 'failed', WAITING: 'waiting' }
