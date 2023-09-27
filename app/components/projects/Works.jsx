@@ -1,15 +1,25 @@
 "use client"
-import React from "react";
-import {motion} from "framer-motion";
+import React, {useState} from "react";
 import {projects} from "./constants";
 import {fadeIn} from "../../utils/motion";
 import {useTranslations} from "next-intl";
 import ProjectCard from "./ProjectCard";
 import SectionHeader from "../../../app/components/SectionHeader";
 import AnimationWrapper from "@/app/components/AnimationWrapper";
+import ProjectTag from "@/app/components/projects/ProjectTag";
 
 const Works = () => {
+    const [tag, setTag] = useState("All");
     const t = useTranslations("ProjectsSection");
+
+    const handleTagChange = (newTag) => {
+        setTag(newTag)
+    }
+
+    const filteredProjects = projects(useTranslations("ProjectsSection.Projects")).filter((project) =>
+        project.filters.includes(tag)
+    );
+
     return (
         <div id="projects" className='pt-24'>
             <SectionHeader t={t}/>
@@ -25,17 +35,34 @@ const Works = () => {
                     </p>
                 </AnimationWrapper>
             </div>
-
-            <AnimationWrapper
+            <div className='text-white flex flex-row justify-center items-center
+                gap-2 py-6'>
+               <ProjectTag
+                   onClick={handleTagChange}
+                   name="All"
+                   isSelected={tag === "All"}
+               />
+                <ProjectTag
+                    onClick={handleTagChange}
+                    name='Unreal Engine'
+                    isSelected={tag === "Unreal Engine"}
+                />
+            </div>
+            <div
                 className='mt-5 flex flex-wrap gap-7'
-                initial='hidden'
-                whileInView='show'
-                viewport={{ once: true}}
             >
-                {projects(useTranslations("ProjectsSection.Projects")).map((project, index) => (
-                    <ProjectCard key={`project-${index}`} index={index} {...project} />
+                {filteredProjects.map((project, index) => (
+                    <AnimationWrapper
+                        key={`project-${index}`}
+                        variants={fadeIn("left", "spring", index * 0.5, 1)}
+                        initial='hidden'
+                        whileInView="show"
+                        viewport={{ once: true }}
+                    >
+                        <ProjectCard key={`project-${index}`} index={index} {...project} />
+                    </AnimationWrapper>
                 ))}
-            </AnimationWrapper>
+            </div>
         </div>
     );
 };

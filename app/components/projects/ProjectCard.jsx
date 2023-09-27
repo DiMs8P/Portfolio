@@ -1,5 +1,3 @@
-import {motion} from "framer-motion";
-import {fadeIn} from "../../../app/utils/motion";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
 import github from "../../../src/github-icon.svg";
@@ -13,7 +11,7 @@ const ProjectCard = ({
                          source_code_link,
                      }) => {
     return (
-        <motion.div variants={fadeIn("left", "spring", index * 0.5 + 1, 1)}>
+        <div>
             <Tilt
                 options={{
                     max: 45,
@@ -59,7 +57,7 @@ const ProjectCard = ({
                     ))}
                 </div>
             </Tilt>
-        </motion.div>
+        </div>
     );
 };
 

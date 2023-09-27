@@ -19,6 +19,7 @@ const projects = (t) => {
                     color: "pink-text-gradient",
                 },
             ],
+            filters: ["All", "Unreal Engine"],
             image: GithubIcon,
             source_code_link: "https://github.com/",
         },
@@ -39,6 +40,7 @@ const projects = (t) => {
                     color: "pink-text-gradient",
                 },
             ],
+            filters: ["All"],
             image: GithubIcon,
             source_code_link: "https://github.com/",
         }
