@@ -7,7 +7,7 @@ const NavLink = ({targetId, title}) => {
           spy={true}
           smooth={true}
           className='block py-2 pl-3 pr-4
-                            text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white cursor-pointer'
+                            text-secondary sm:text-xl rounded md:p-0 hover:text-white cursor-pointer'
       >
           {title}
       </Link>
