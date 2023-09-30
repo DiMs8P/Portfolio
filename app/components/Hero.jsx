@@ -53,7 +53,7 @@ const Hero = () => {
                     whileInView={'show'}
                     viewport={{ once: true }}
                 >
-                    <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'>{t("Introduction")}</p>
+                    <p className='text-secondary text-base sm:text-lg mb-6 lg:text-xl'>{t("Introduction")}</p>
                 </AnimationWrapper>
                 <AnimationWrapper
                     variants={fadeIn('up', 'tween', 0.5)}

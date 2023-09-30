@@ -12,6 +12,8 @@ const styles = {
         "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
     sectionSubText:
         "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
+    sectionIntroText:
+        "text-[#C9C9C9] text-base sm:text-lg mb-6 lg:text-xl",
 
     buttonStyle:
         "bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500\n" +
