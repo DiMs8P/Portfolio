@@ -8,6 +8,8 @@ import {getTabData} from "./constants";
 import {useTranslations} from "next-intl";
 import SectionHeader from "../../../app/components/SectionHeader";
 import AnimationWrapper from "../AnimationWrapper";
+import {styles} from "../../[locale]/styles";
+
 const About = () => {
     const [tab, setTab] = useState("skills");
     const [isPending, startTransition] = useTransition();
@@ -44,7 +46,7 @@ const About = () => {
                       initial='hidden'
                       whileInView={'show'}
                       viewport={{ once: true }}
-                      className='mt-4 lg:ml-5 md:mt-0 text-[17px] leading-[30px] text-left flex flex-col h-full'
+                      className={`${styles.sectionIntroText} mt-4 lg:ml-5 md:mt-0 text-left flex flex-col h-full`}
                   >
                       <p>
                           {t("AboutText")}

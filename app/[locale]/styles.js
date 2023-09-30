@@ -13,7 +13,9 @@ const styles = {
     sectionSubText:
         "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
     sectionIntroText:
-        "text-[#C9C9C9] text-base sm:text-lg mb-6 lg:text-xl",
+        "text-secondary text-[16px] sm:text-[18px] lg:text-[20px] leading-[30px]",
+    emailSectionSize:
+        "text-[21px] sm:text-[23px] lg:text-[25px] ",
 
     buttonStyle:
         "bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500\n" +

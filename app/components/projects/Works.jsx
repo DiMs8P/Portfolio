@@ -7,6 +7,7 @@ import ProjectCard from "./ProjectCard";
 import SectionHeader from "../../../app/components/SectionHeader";
 import AnimationWrapper from "../AnimationWrapper";
 import ProjectTag from "./ProjectTag";
+import {styles} from "@/app/[locale]/styles";
 
 const Works = () => {
     const [tag, setTag] = useState("All");
@@ -30,7 +31,7 @@ const Works = () => {
                     whileInView={'show'}
                     viewport={{ once: true }}
                 >
-                    <p className='mt-12 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+                    <p className={`${styles.sectionIntroText} mt-12 max-w-3xl`}>
                         {t("ProjectsText")}
                     </p>
                 </AnimationWrapper>

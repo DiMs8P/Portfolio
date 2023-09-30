@@ -55,7 +55,7 @@ const Email = () => {
                       whileInView={'show'}
                       viewport={{ once: true }}
                   >
-                      <h5 className='text-xl font-bold'>
+                      <h5 className={`${styles.emailSectionSize} font-bold`}>
                           {t("GetInTouch")}
                       </h5>
                   </AnimationWrapper>
@@ -65,7 +65,7 @@ const Email = () => {
                       whileInView={'show'}
                       viewport={{ once: true }}
                   >
-                      <p className='mt-3 text-secondary text-[17px] leading-[30px] mb-5 lg:mr-5 max-w-md'>
+                      <p className={`${styles.sectionIntroText} mt-3 mb-5 lg:mr-5 max-w-md`}>
                           {t("EmailText")}
                       </p>
                   </AnimationWrapper>
