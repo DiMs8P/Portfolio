@@ -30,7 +30,9 @@
         }
       },
       "Certifications": {
-        "Title": "Certifications"
+        "Title": "Certifications",
+        "English": "English certificate level B1",
+        "StartTheGame": "Accelerator certificate \"Начни игру\""
       }
     }
   },

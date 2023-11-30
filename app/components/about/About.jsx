@@ -64,12 +64,12 @@ const About = () => {
                           >
                               {t("TabData.Education.Title")}
                           </TabButton>
-                          {/*<TabButton
+                          {<TabButton
                               selectTab={() => handleTabChange("certifications")}
                               active={tab === 'certifications'}
                           >
                               {t("TabData.Certifications.Title")}
-                          </TabButton>*/}
+                          </TabButton>}
                       </div>
                       <div className='mt-8'>
                           {

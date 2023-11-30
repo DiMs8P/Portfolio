@@ -20,23 +20,24 @@ const getTabData = (t) => {
                     <li>{t("Education.University")}</li>
                     <li>
                         Udemy
-                        <ul className='list-disc pl-2'>
-                            <li><a href='https://www.udemy.com/course/unrealengine/'>{t("Education.Udemy.FirstShooter")}</a></li>
-                            <li><a href='https://www.udemy.com/course/unreal-engine-5-cpp-multiplayer-shooter/'>{t("Education.Udemy.Multiplayer")}</a></li>
-                            <li><a href='https://www.udemy.com/course/unitycourse/'>{t("Education.Udemy.Unity")}</a></li>
+                        <ul className='list-decimal pl-2'>
+                            <li className='hover:text-white'><a target='_blank' href='https://www.udemy.com/course/unrealengine/'>{t("Education.Udemy.FirstShooter")}</a></li>
+                            <li className='hover:text-white'><a target='_blank' href='https://www.udemy.com/course/unreal-engine-5-cpp-multiplayer-shooter/'>{t("Education.Udemy.Multiplayer")}</a></li>
+                            <li className='hover:text-white'><a target='_blank' href='https://www.udemy.com/course/unitycourse/'>{t("Education.Udemy.Unity")}</a></li>
                         </ul>
                     </li>
                 </ul>
             )
         },
-/*        {
+        {
             id: "certifications",
             content: (
                 <ul className='list-disc pl-2'>
-                    <li>English </li>
+                    <li className='hover:text-white'><a target='_blank' href='https://imgur.com/a/2uVlUbc'>{t("Certifications.English")}</a></li>
+                    <li className='hover:text-white'><a target='_blank' href='https://imgur.com/a/4SNIoap'>{t("Certifications.StartTheGame")}</a></li>
                 </ul>
             )
-        }*/
+        }
     ]
 }
 
