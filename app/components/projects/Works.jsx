@@ -7,7 +7,7 @@ import ProjectCard from "./ProjectCard";
 import SectionHeader from "../../../app/components/SectionHeader";
 import AnimationWrapper from "../AnimationWrapper";
 import ProjectTag from "./ProjectTag";
-import {styles} from "@/app/[locale]/styles";
+import {styles} from "../../../app/[locale]/styles";
 
 const Works = () => {
     const [tag, setTag] = useState("All");
