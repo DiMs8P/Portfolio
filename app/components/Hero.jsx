@@ -63,7 +63,7 @@ const Hero = () => {
                 >
                     <button
                         className={`px-6 py-3 w-full sm:w-fit rounded-full mr-4
-                         ${styles.buttonStyle}  text-white`}
+                         ${styles.buttonStyle} text-[17px] text-white`}
                     >
                         {t("HireButton")}
                     </button>
@@ -72,7 +72,7 @@ const Hero = () => {
                         bg-gradient-to-br from-teal-500 via-cyan-500
                         to-blue-500 hover:bg-slate-800 mt-3'
                     >
-                        <span className='block text-white bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>{t("CVButton")}</span>
+                        <span className='block text-white text-[17px] bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>{t("CVButton")}</span>
                     </button>
                 </AnimationWrapper>
             </div>

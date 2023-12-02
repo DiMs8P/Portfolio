@@ -1,5 +1,6 @@
 const sizes = {
-    baseTextSize: "text-[16px] sm:text-[18px] lg:text-[20px]",
+    baseTextSize:
+        "text-[16px] sm:text-[18px] lg:text-[20px]",
     emailSectionSize:
         "text-[21px] sm:text-[23px] lg:text-[25px]",
 };
