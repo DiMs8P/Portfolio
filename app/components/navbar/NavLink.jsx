@@ -1,4 +1,5 @@
 import { Link } from 'react-scroll'
+import {sizes} from "../../[locale]/styles";
 
 const NavLink = ({targetId, title}) => {
   return(
@@ -6,8 +7,9 @@ const NavLink = ({targetId, title}) => {
           to={targetId}
           spy={true}
           smooth={true}
-          className='block py-2 pl-3 pr-4
-                            text-secondary sm:text-xl rounded md:p-0 hover:text-white cursor-pointer'
+          className={`${sizes.baseTextSize} block py-2 pl-3 pr-4
+                            text-secondary rounded md:p-0 hover:text-white
+                            cursor-pointer`}
       >
           {title}
       </Link>

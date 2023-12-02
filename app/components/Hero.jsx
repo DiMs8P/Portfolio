@@ -63,7 +63,7 @@ const Hero = () => {
                 >
                     <button
                         className={`px-6 py-3 w-full sm:w-fit rounded-full mr-4
-                         ${styles.buttonStyle} text-white`}
+                         ${styles.buttonStyle}  text-white`}
                     >
                         {t("HireButton")}
                     </button>

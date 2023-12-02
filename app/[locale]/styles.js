@@ -1,3 +1,9 @@
+const sizes = {
+    baseTextSize: "text-[16px] sm:text-[18px] lg:text-[20px]",
+    emailSectionSize:
+        "text-[21px] sm:text-[23px] lg:text-[25px]",
+};
+
 const styles = {
     paddingX: "sm:px-16 px-6",
     paddingY: "sm:py-16 py-6",
@@ -11,11 +17,9 @@ const styles = {
     sectionHeadText:
         "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
     sectionSubText:
-        "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
+        `text-secondary ${sizes.baseTextSize} uppercase tracking-wider`,
     sectionIntroText:
-        "text-secondary text-[16px] sm:text-[18px] lg:text-[20px] leading-[30px]",
-    emailSectionSize:
-        "text-[21px] sm:text-[23px] lg:text-[25px] ",
+        `text-secondary ${sizes.baseTextSize} leading-[30px]`,
 
     buttonStyle:
         "bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500\n" +
@@ -23,4 +27,4 @@ const styles = {
         "                        hover:bg-slate-100",
 };
 
-export { styles };
+export { styles, sizes };

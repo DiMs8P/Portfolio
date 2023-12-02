@@ -1,6 +1,6 @@
 "use client";
 import React, {useState} from 'react'
-import {styles} from "../../[locale]/styles";
+import {sizes, styles} from "../../[locale]/styles";
 import {useTranslations} from "next-intl";
 import SectionHeader from "../../../app/components/SectionHeader";
 import {fadeIn} from "../../../app/utils/motion";
@@ -55,7 +55,7 @@ const Email = () => {
                       whileInView={'show'}
                       viewport={{ once: true }}
                   >
-                      <h5 className={`${styles.emailSectionSize} font-bold`}>
+                      <h5 className={`${sizes.emailSectionSize} font-bold`}>
                           {t("GetInTouch")}
                       </h5>
                   </AnimationWrapper>
