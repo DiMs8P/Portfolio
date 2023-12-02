@@ -12,7 +12,7 @@ const Social = ({ social, index }) => {
           whileInView={'show'}
           viewport={{ once: true }}
       >
-          <Link href={social.targetLink}>
+          <Link href={social.targetLink} target="_blank">
               <Image src={social.image} alt={social.name} className='max-h-[48px] max-w-[48px]'/>
           </Link>
       </AnimationWrapper>

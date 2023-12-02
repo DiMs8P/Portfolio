@@ -8,7 +8,7 @@ import {getTabData} from "./constants";
 import {useTranslations} from "next-intl";
 import SectionHeader from "../../../app/components/SectionHeader";
 import AnimationWrapper from "../AnimationWrapper";
-import {styles} from "../../[locale]/styles";
+import {sizes, styles} from "../../[locale]/styles";
 
 const About = () => {
     const [tab, setTab] = useState("skills");
@@ -24,34 +24,25 @@ const About = () => {
   return (
       <div id="about" className='pt-24'>
           <SectionHeader t={t}/>
-          <section className='text-white'>
-              <div className='grid md:grid-cols-2 gap-8 items-center mt-12 px-4
-        xl:gap-16 xl:px-16 relative'>
+          <section className='grid md:grid-cols-2 my-12 gap-8 relative'>
                   <AnimationWrapper
                       variants={fadeIn('right', 'tween', 0.5)}
                       initial='hidden'
                       whileInView={'show'}
                       viewport={{ once: true }}
                   >
-                      <Image
-                          src={AboutImage}
-                          alt='AboutImage'
-                          width={500}
-                          height={500}
-                          className='rounded-[30px]'
-                      />
+                      <p className={`${styles.sectionIntroText} lg:mr-5 max-w-md`}>
+                          {t("AboutText")}
+                      </p>
                   </AnimationWrapper>
                   <AnimationWrapper
                       variants={fadeIn('left', 'tween', 0.5)}
                       initial='hidden'
                       whileInView={'show'}
                       viewport={{ once: true }}
-                      className={`${styles.sectionIntroText} mt-4 lg:ml-5 md:mt-0 text-left flex flex-col h-full`}
+                      className={`${styles.sectionIntroText}`}
                   >
-                      <p>
-                          {t("AboutText")}
-                      </p>
-                      <div className='flex flex-row justify-start mt-8'>
+                      <div className={`${styles.sectionIntroText} flex flex-row justify-start`}>
                           <TabButton
                               selectTab={() => handleTabChange("skills")}
                               active={tab === 'skills'}
@@ -76,8 +67,31 @@ const About = () => {
                               getTabData(useTranslations("AboutSection.TabData")).find((t) => t.id === tab).content
                           }
                       </div>
+
+                      <div className={`${sizes.baseTextSize} skills-area`}>
+                          <div className="skill">
+                              <div className="skill-title">HTML</div>
+                              <div className="skill-bar"></div>
+                              <div className="html skill-fill">
+                                  <span className="skill-percent">50%</span>
+                              </div>
+                          </div>
+                          <div className="skill">
+                              <div className="skill-title">CSS</div>
+                              <div className="skill-bar"></div>
+                              <div className="css skill-fill">
+                                  <span className="skill-percent">80%</span>
+                              </div>
+                          </div>
+                          <div className="skill">
+                              <div className="skill-title">JavaScript</div>
+                              <div className="skill-bar"></div>
+                              <div className="js skill-fill">
+                                  <span className="skill-percent">70%</span>
+                              </div>
+                          </div>
+                      </div>
                   </AnimationWrapper>
-              </div>
           </section>
       </div>
   )

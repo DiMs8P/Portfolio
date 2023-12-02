@@ -126,3 +126,84 @@ body {
   padding-bottom: 100px;
   display: block;
 }
+
+.skills-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.skill-title {
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    height: 20px;
+    z-index: -1;
+
+    border-radius: 100px;
+    position: absolute;
+}
+
+.skill-fill {
+    background: linear-gradient(to right, #00f6ad, #0012d9);;
+    height: 20px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    overflow: hidden;
+}
+
+.skill-percent {
+    font-size: 15px;
+}
+
+.html {
+    animation: html 2s;
+    width: 50%;
+}
+
+.css {
+    animation: css 2s;
+    width: 80%;
+}
+
+.js {
+    animation: js 2s;
+    width: 70%;
+}
+
+@keyframes html {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes css {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes js {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70%;
+    }
+}
