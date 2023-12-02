@@ -87,7 +87,7 @@ const Email = () => {
                       <div className='mb-6'>
                           <label
                               htmlFor='email'
-                              className='text-white block mb-2 text-[17px] font-medium'
+                              className={`${sizes.baseTextSize} text-white block mb-2 font-medium`}
                           >
                               {t("Form.Email.Title")}
                           </label>
@@ -96,15 +96,15 @@ const Email = () => {
                               type='email'
                               id='email'
                               required
-                              className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
-                    text-gray-100 text-[17px] rounded-lg block w-full p-2.5'
+                              className={`${sizes.baseTextSize} bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
+                    text-gray-100 rounded-lg block w-full p-2.5`}
                               placeholder="example@google.com"
                           />
                       </div>
                       <div className='mb-6'>
                           <label
                               htmlFor='subject'
-                              className='text-white block mb-2 text-[17px] font-medium'
+                              className={`${sizes.baseTextSize} text-white block mb-2 font-medium`}
                           >
                               {t("Form.Subject.Title")}
                           </label>
@@ -113,15 +113,15 @@ const Email = () => {
                               type='text'
                               id='subject'
                               required
-                              className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
-                    text-gray-100 text-[17px] rounded-lg block w-full p-2.5'
+                              className={`${sizes.baseTextSize} bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
+                    text-gray-100 rounded-lg block w-full p-2.5`}
                               placeholder={t("Form.Subject.Example")}
                           />
                       </div>
                       <div className='mb-6'>
                           <label
                               htmlFor='message'
-                              className='text-white block mb-2 text-[17px] font-medium'
+                              className={`${sizes.baseTextSize} text-white block mb-2 font-medium`}
                           >
                               {t("Form.Message.Title")}
                           </label>
@@ -130,28 +130,28 @@ const Email = () => {
                               id='message'
                               rows={5}
                               required
-                              className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
-                    text-gray-100 text-[17px] rounded-lg block w-full p-2.5'
+                              className={`${sizes.baseTextSize} bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9]
+                    text-gray-100 rounded-lg block w-full p-2.5`}
                               placeholder={t("Form.Message.Example")}
                           />
                       </div>
                       <button
                           type='submit'
-                          className={`${styles.buttonStyle} text-white font-medium py-2.5
+                          className={`${styles.buttonStyle} text-white text-[17px] font-medium py-2.5
                     px-5 rounded-lg w-full`}
                       >
                           {t("Form.SendButton")}
                       </button>
                       {
                           EmailStatus === EmailStatuses.SUCCESS && (
-                              <p className='text-green-500 text-[17px] mt-2'>
+                              <p className={`${sizes.baseTextSize} text-green-500 mt-2`}>
                                   {t("Form.SuccessSend")}
                               </p>
                           )
                       }
                       {
                           EmailStatus === EmailStatuses.FAILED && (
-                              <p className='text-red-500 text-[17px] mt-2'>
+                              <p className={`${sizes.baseTextSize} text-red-500 mt-2`}>
                                   {t("Form.FailedSend")}
                               </p>
                           )

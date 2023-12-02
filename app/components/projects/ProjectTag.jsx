@@ -1,4 +1,5 @@
 import React from 'react'
+import {sizes} from "../../../app/[locale]/styles";
 
 const ProjectTag = ({name, onClick, isSelected}) => {
   const buttonStyles = isSelected ?
@@ -6,7 +7,7 @@ const ProjectTag = ({name, onClick, isSelected}) => {
       "border-slate-600 hover:border-white"
   return (
       <button
-          className={`${buttonStyles} rounded-full border-2 px-6 py-3 sm:text-xl cursor-pointer`}
+          className={`${buttonStyles} ${sizes.baseTextSize} text-secondary rounded-full border-2 px-6 py-3 cursor-pointer`}
           onClick={() => onClick(name)}
       >
           {name}
