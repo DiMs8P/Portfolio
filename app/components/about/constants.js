@@ -1,4 +1,5 @@
 import React from "react";
+import {sizes} from "@/app/[locale]/styles";
 
 const getTabData = (t) => {
     return [
@@ -6,10 +7,36 @@ const getTabData = (t) => {
             id: "skills",
             content: (
                 <ul className='text-white list-disc pl-2'>
-                    <li>C++</li>
-                    <li>Unreal Engine</li>
-                    <li>OpenGL</li>
-                    <li>PostgreSQL</li>
+                    <div className={`${sizes.baseTextSize} text-white skills-area`}>
+                        <div className="skill">
+                            <div className="skill-title">Unreal Engine</div>
+                            <div className="skill-bar"></div>
+                            <div className="ue skill-fill">
+                                <span className="skill-percent">50%</span>
+                            </div>
+                        </div>
+                        <div className="skill">
+                            <div className="skill-title">C++</div>
+                            <div className="skill-bar"></div>
+                            <div className="cpp skill-fill">
+                                <span className="skill-percent">60%</span>
+                            </div>
+                        </div>
+                        <div className="skill">
+                            <div className="skill-title">C#</div>
+                            <div className="skill-bar"></div>
+                            <div className="csharp skill-fill">
+                                <span className="skill-percent">40%</span>
+                            </div>
+                        </div>
+                        <div className="skill">
+                            <div className="skill-title">PostgreSQL</div>
+                            <div className="skill-bar"></div>
+                            <div className="pSQL skill-fill">
+                                <span className="skill-percent">70%</span>
+                            </div>
+                        </div>
+                    </div>
                 </ul>
             )
         },

@@ -143,10 +143,7 @@ body {
 
 .skill-bar {
     width: 100%;
-    background: rgba(255, 255, 255, 0.1);
     height: 20px;
-    z-index: -1;
-
     border-radius: 100px;
     position: absolute;
 }
@@ -166,22 +163,27 @@ body {
     font-size: 15px;
 }
 
-.html {
-    animation: html 2s;
+.ue {
+    animation: ue 2s;
     width: 50%;
 }
 
-.css {
-    animation: css 2s;
-    width: 80%;
+.cpp {
+    animation: cpp 2s;
+    width: 60%;
 }
 
-.js {
-    animation: js 2s;
+.csharp {
+    animation: csharp 2s;
+    width: 40%;
+}
+
+.pSQL {
+    animation: pSQL 2s;
     width: 70%;
 }
 
-@keyframes html {
+@keyframes ue {
     from {
         width: 0;
     }
@@ -190,16 +192,25 @@ body {
     }
 }
 
-@keyframes css {
+@keyframes cpp {
     from {
         width: 0;
     }
     to {
-        width: 80%;
+        width: 60%;
     }
 }
 
-@keyframes js {
+@keyframes csharp {
+    from {
+        width: 0;
+    }
+    to {
+        width: 40%;
+    }
+}
+
+@keyframes pSQL {
     from {
         width: 0;
     }

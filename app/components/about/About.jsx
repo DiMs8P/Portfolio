@@ -1,14 +1,12 @@
 "use client"
 import React, {useTransition, useState} from 'react'
-import Image from 'next/image'
-import AboutImage from "../../../src/github-icon.svg";
 import TabButton from "./TabButton";
 import {fadeIn} from "../../../app/utils/motion";
 import {getTabData} from "./constants";
 import {useTranslations} from "next-intl";
 import SectionHeader from "../../../app/components/SectionHeader";
 import AnimationWrapper from "../AnimationWrapper";
-import {sizes, styles} from "../../[locale]/styles";
+import {styles} from "../../[locale]/styles";
 
 const About = () => {
     const [tab, setTab] = useState("skills");
@@ -66,30 +64,6 @@ const About = () => {
                           {
                               getTabData(useTranslations("AboutSection.TabData")).find((t) => t.id === tab).content
                           }
-                      </div>
-
-                      <div className={`${sizes.baseTextSize} skills-area`}>
-                          <div className="skill">
-                              <div className="skill-title">HTML</div>
-                              <div className="skill-bar"></div>
-                              <div className="html skill-fill">
-                                  <span className="skill-percent">50%</span>
-                              </div>
-                          </div>
-                          <div className="skill">
-                              <div className="skill-title">CSS</div>
-                              <div className="skill-bar"></div>
-                              <div className="css skill-fill">
-                                  <span className="skill-percent">80%</span>
-                              </div>
-                          </div>
-                          <div className="skill">
-                              <div className="skill-title">JavaScript</div>
-                              <div className="skill-bar"></div>
-                              <div className="js skill-fill">
-                                  <span className="skill-percent">70%</span>
-                              </div>
-                          </div>
                       </div>
                   </AnimationWrapper>
           </section>
