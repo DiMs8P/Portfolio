@@ -44,10 +44,9 @@
       "DreamVR": {
         "Date": "January 2023 - August 2023",
         "Points": {
-          "FirstPoint": "Developing and maintaining web applications using React.js and other related technologies.",
-          "SecondPoint": "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "ThirdPoint": "Implementing responsive design and ensuring cross-browser compatibility.",
-          "ForthPoint": "Participating in code reviews and providing constructive feedback to other developers."
+          "FirstPoint": "Gaining first commercial experience in mobile game development.",
+          "SecondPoint": "Collaborating with different teams including designers and other developers.",
+          "ThirdPoint": "Solving problems of various complexities, ranging from project tasks to self-improvement."
         }
       }
     }
@@ -56,7 +55,7 @@
   "ProjectsSection": {
     "SubText": "My Work",
     "HeadText": "Projects.",
-    "ProjectsText": "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
+    "ProjectsText": "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
     "Projects": {
       "SwapAndTap": "About Swap and tap",
       "ShooterGame": "About Shooter game"
@@ -74,14 +73,14 @@
       },
       "Subject": {
         "Title": "Subject",
-        "Example": "Just saying hi!"
+        "Example": "That feature is not a bug!"
       },
       "Message": {
         "Title": "Message",
-        "Example": "Let's talk about"
+        "Example": "A Superhero's Hello"
       },
       "SendButton": "Send Message",
-      "SuccessSend": "Email sent successfully!",
+      "SuccessSend": "Achievement unlocked: Contacted you!",
       "FailedSend": "Something went wrong, but you can use social media!"
     }
   }
