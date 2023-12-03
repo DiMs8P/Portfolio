@@ -6,7 +6,7 @@ import logoImage from "../../src/logo_h.png";
 const Footer = () => {
   return (
     <footer className={`${ styles.paddingX } footer border-t z-10 border-t-[#33353F] text-white`}>
-      <div className='lg:max-w-[1400px] max-w-screen-lg flex justify-between items-center mx-auto gap-x-12 py-12'>
+      <div className='lg:max-w-[1400px] max-w-screen-lg flex justify-between items-center mx-auto gap-x-12 py-6'>
           <Image
               src={logoImage}
               alt='AboutImage'
