@@ -7,6 +7,7 @@ import {styles} from "../[locale]/styles";
 import {useTranslations} from "next-intl";
 import {fadeIn} from "../../app/utils/motion";
 import AnimationWrapper from "../../app/components/AnimationWrapper";
+import { Link } from 'react-scroll'
 
 const Hero = () => {
     const t = useTranslations("HeroSection");
@@ -61,12 +62,17 @@ const Hero = () => {
                     whileInView={'show'}
                     viewport={{ once: true }}
                 >
-                    <button
-                        className={`px-6 py-3 w-full sm:w-fit rounded-full mr-4
-                         ${styles.buttonStyle} text-[17px] text-white`}
+                    <Link
+                       to={"contact"}
+                       spy={true}
+                       smooth={true}
                     >
-                        {t("HireButton")}
-                    </button>
+                       <button
+                           className={`px-6 py-3 w-full sm:w-fit rounded-full mr-4
+                                       ${styles.buttonStyle} text-[17px] text-white`}>
+                           {t("HireButton")}
+                       </button>
+                    </Link>
                     <button
                         className='px-1 py-1 w-full sm:w-fit rounded-full
                         bg-gradient-to-br from-teal-500 via-cyan-500

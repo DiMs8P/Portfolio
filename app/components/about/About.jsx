@@ -22,7 +22,7 @@ const About = () => {
   return (
       <div id="about" className='pt-24'>
           <SectionHeader t={t}/>
-          <section className='grid md:grid-cols-2 my-12 gap-8 relative'>
+          <section className='grid md:grid-cols-2 mt-12 gap-8 relative'>
                   <AnimationWrapper
                       variants={fadeIn('right', 'tween', 0.5)}
                       initial='hidden'
