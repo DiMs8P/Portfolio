@@ -66,7 +66,16 @@ const Email = () => {
                       viewport={{ once: true }}
                   >
                       <p className={`${styles.sectionIntroText} mt-3 mb-5 lg:mr-5 max-w-md`}>
-                          {t("EmailText")}
+                          {t("EmailText").split("\n").map((line, index, array) =>
+                              index === array.length - 1 ? (
+                                  line
+                              ) : (
+                                  <React.Fragment key={index}>
+                                      {line}
+                                      <br />
+                                  </React.Fragment>
+                              )
+                          )}
                       </p>
                   </AnimationWrapper>
                   <div className='socials flex flex-row gap-4'>
