@@ -33,7 +33,7 @@ const Navbar = () => {
 
                 <div className='mobile-menu block md:hidden'>
                     <div className="flex flex-row items-center gap-x-4">
-                        <ChangeLanguageButton/>
+                        {/*<ChangeLanguageButton/>*/}
                         {
                             !navbarOpen ?
                                 <button
@@ -62,7 +62,7 @@ const Navbar = () => {
                                 </li>
                             ))
                         }
-                    <ChangeLanguageButton/>
+                    {/*<ChangeLanguageButton/>*/}
                     </ul>
                 </div>
             </div>
