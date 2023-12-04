@@ -1,48 +1,68 @@
 import GithubIcon from "../../../src/github-icon.svg";
+import SwapAndTap from "../../../src/SwapAndTap.jpg";
+import GoogleDrive from "../../../src/GoogleDrive.png";
+import ShoutThemUp from "../../../src/ShoutThemUp.jpg";
+import MazeGenerator from "../../../src/MazeGenerator.png"
 
 const projects = (t) => {
     return [
         {
-            name: "Swap And Tap",
+            name: "SwapAndTap",
             description: t("SwapAndTap"),
             tags: [
                 {
-                    name: "react",
+                    name: "UnrealEngine5",
                     color: "blue-text-gradient",
                 },
                 {
-                    name: "mongodb",
+                    name: "Mobile",
                     color: "green-text-gradient",
-                },
-                {
-                    name: "tailwind",
-                    color: "pink-text-gradient",
-                },
+                }
             ],
             filters: [filters[0], filters[1]],
-            image: GithubIcon,
-            source_code_link: "https://github.com/",
+            image: SwapAndTap,
+            src: GoogleDrive,
+            source_code_link: "https://drive.google.com/drive/folders/1PfrGncdCtt9NgWj2s0_CDAaqpyIEZREp?usp=sharing",
         },
         {
-            name: "Shooter Game",
+            name: "TreasureHunting",
             description: t("ShooterGame"),
             tags: [
                 {
-                    name: "react",
+                    name: "UnrealEngine5",
                     color: "blue-text-gradient",
                 },
                 {
-                    name: "restapi",
+                    name: "PC",
+                    color: "green-text-gradient",
+                }
+            ],
+            filters: [filters[0], filters[1]],
+            image: MazeGenerator,
+            src: GithubIcon,
+            source_code_link: "https://github.com/DiMs8P/TreasureHunting",
+        },
+        {
+            name: "ShootThemUp",
+            description: t("ShooterGame"),
+            tags: [
+                {
+                    name: "UnrealEngine5",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "PC",
                     color: "green-text-gradient",
                 },
                 {
-                    name: "scss",
+                    name: "Udemy",
                     color: "pink-text-gradient",
                 },
             ],
             filters: [filters[0], filters[1]],
-            image: GithubIcon,
-            source_code_link: "https://github.com/",
+            image: ShoutThemUp,
+            src: GithubIcon,
+            source_code_link: "https://github.com/DiMs8P/ShootThemUp",
         }
     ];
 }

@@ -56,8 +56,8 @@
     "HeadText": "Projects.",
     "ProjectsText": "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
     "Projects": {
-      "SwapAndTap": "About Swap and tap",
-      "ShooterGame": "About Shooter game"
+      "SwapAndTap": "A rhythm game like Osu. You need to tap on game elements to the rhythm. The source code was lost, but I still have the APK :)",
+      "ShooterGame": "Web application that enables users to search for job openings, view estimat"
     }
   },
 

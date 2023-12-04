@@ -40,7 +40,7 @@ const Works = () => {
                 {filters.map((project, index) => (
                     <AnimationWrapper
                         key={index}
-                        variants={fadeIn("left", "spring", index * 0.5, 1)}
+                        variants={fadeIn("left", "spring", index * 0.5 + 1, 1)}
                         initial='hidden'
                         whileInView="show"
                         viewport={{ once: true }}

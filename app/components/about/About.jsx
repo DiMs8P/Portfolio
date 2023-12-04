@@ -40,7 +40,7 @@ const About = () => {
                       {filters.map((name, index) => (
                           <AnimationWrapper
                               key={index}
-                              variants={fadeIn("left", "spring", index * 0.5, 1)}
+                              variants={fadeIn("left", "spring", index * 0.5 + 1, 1)}
                               initial='hidden'
                               whileInView="show"
                               viewport={{ once: true }}
@@ -60,9 +60,11 @@ const About = () => {
                       viewport={{ once: true }}
                       className={`${styles.sectionIntroText}`}
                   >
-                     {
-                          getTabData(useTranslations("AboutSection.TabData")).find((t) => t.id === tag).content
-                     }
+                      <div className='mt-5'>
+                          {
+                              getTabData(useTranslations("AboutSection.TabData")).find((t) => t.id === tag).content
+                          }
+                      </div>
                   </AnimationWrapper>
           </section>
       </div>
