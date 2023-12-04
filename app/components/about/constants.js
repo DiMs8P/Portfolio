@@ -52,7 +52,7 @@ const getTabData = (t) => {
         {
             id: "education",
             content: (
-                <ul className='text-white list-disc list-outside'>
+                <ul className='text-white list-disc list-outside max-w-3xl'>
                     <li className='mb-5'>
                         Bachelor&apos;s degree
                         <ul className='text-secondary list-decimal list-outside pl-2'>
@@ -88,7 +88,7 @@ const getTabData = (t) => {
         {
             id: "certifications",
             content: (
-                <ul className='text-secondary list-disc list-outside'>
+                <ul className='text-secondary list-disc list-outside max-w-3xl'>
                     <li>
                         <a className='hover:text-white'
                            target='_blank'

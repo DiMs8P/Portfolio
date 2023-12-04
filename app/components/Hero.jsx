@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section>
         <div className='grid md:grid-cols-2 mt-12 gap-8 relative'>
-            <div className='place-self-center text-center md:text-left'>
+            <div className='self-center justify-self-start text-center md:text-left'>
                 <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold'>
                     <AnimationWrapper
                         variants={fadeIn('right', 'tween', 0.3)}
