@@ -19,7 +19,7 @@ const projects = (t) => {
                     color: "pink-text-gradient",
                 },
             ],
-            filters: ["All", "Unreal Engine"],
+            filters: [filters[0], filters[1]],
             image: GithubIcon,
             source_code_link: "https://github.com/",
         },
@@ -40,11 +40,17 @@ const projects = (t) => {
                     color: "pink-text-gradient",
                 },
             ],
-            filters: ["All"],
+            filters: [filters[0], filters[1]],
             image: GithubIcon,
             source_code_link: "https://github.com/",
         }
     ];
 }
 
-export {projects};
+const filters = [
+    "All",
+    "Unreal Engine"
+]
+
+
+export {projects, filters};

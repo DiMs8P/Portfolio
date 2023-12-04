@@ -1,6 +1,6 @@
 "use client"
 import React, {useState} from "react";
-import {projects} from "./constants";
+import {filters, projects} from "./constants";
 import {fadeIn} from "../../utils/motion";
 import {useTranslations} from "next-intl";
 import ProjectCard from "./ProjectCard";
@@ -38,16 +38,21 @@ const Works = () => {
             </div>
             <div className='text-white flex flex-row justify-center items-center
                 gap-2 py-6'>
-               <ProjectTag
-                   onClick={handleTagChange}
-                   name="All"
-                   isSelected={tag === "All"}
-               />
-                <ProjectTag
-                    onClick={handleTagChange}
-                    name='Unreal Engine'
-                    isSelected={tag === "Unreal Engine"}
-                />
+                {filters.map((project, index) => (
+                    <AnimationWrapper
+                        key={index}
+                        variants={fadeIn("left", "spring", index * 0.5, 1)}
+                        initial='hidden'
+                        whileInView="show"
+                        viewport={{ once: true }}
+                    >
+                        <ProjectTag
+                            onClick={handleTagChange}
+                            name={project}
+                            isSelected={tag === project}
+                        />
+                    </AnimationWrapper>
+                ))}
             </div>
             <div
                 className='mt-5 flex flex-wrap gap-7'

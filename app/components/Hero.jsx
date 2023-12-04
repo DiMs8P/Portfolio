@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import HeroImage from "../../src/github-icon.svg";
+import HeroImage from "../../src/heroImage.png";
 import { TypeAnimation } from "react-type-animation";
 import {styles} from "../[locale]/styles";
 import {useTranslations} from "next-intl";
@@ -93,7 +93,7 @@ const Hero = () => {
                     <Image
                         src={HeroImage}
                         alt="hero image"
-                        className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
                         width={300}
                         height={300}
                     />
