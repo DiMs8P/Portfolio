@@ -13,7 +13,7 @@ const Hero = () => {
     const t = useTranslations("HeroSection");
   return (
     <section>
-        <div className='grid md:grid-cols-2'>
+        <div className='grid md:grid-cols-2 mt-12 gap-8 relative'>
             <div className='place-self-center text-center md:text-left'>
                 <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold'>
                     <AnimationWrapper
@@ -82,9 +82,8 @@ const Hero = () => {
                     </button>
                 </AnimationWrapper>
             </div>
-            <div className='place-self-center mt-4 lg:mt-0'>
+            <div className='place-self-center'>
                 <AnimationWrapper
-                    className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative"
                     variants={fadeIn('left', 'tween', 0.3)}
                     initial='hidden'
                     whileInView={'show'}
@@ -93,9 +92,9 @@ const Hero = () => {
                     <Image
                         src={HeroImage}
                         alt="hero image"
-                        className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
-                        width={300}
-                        height={300}
+                        className="rounded-full w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]"
+                        width={400}
+                        height={400}
                     />
                 </AnimationWrapper>
             </div>
