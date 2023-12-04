@@ -49,7 +49,8 @@ const projects = (t) => {
 
 const filters = [
     "All",
-    "Unreal Engine"
+    "Unreal Engine",
+    "Other"
 ]
 
 

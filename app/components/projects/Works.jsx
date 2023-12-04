@@ -6,11 +6,11 @@ import {useTranslations} from "next-intl";
 import ProjectCard from "./ProjectCard";
 import SectionHeader from "../../../app/components/SectionHeader";
 import AnimationWrapper from "../AnimationWrapper";
-import ProjectTag from "./ProjectTag";
+import FilterTag from "../utils/FilterTag";
 import {styles} from "../../../app/[locale]/styles";
 
 const Works = () => {
-    const [tag, setTag] = useState("All");
+    const [tag, setTag] = useState(filters[0]);
     const t = useTranslations("ProjectsSection");
 
     const handleTagChange = (newTag) => {
@@ -36,8 +36,7 @@ const Works = () => {
                     </p>
                 </AnimationWrapper>
             </div>
-            <div className='text-white flex flex-row justify-center items-center
-                gap-2 py-6'>
+            <div className={`${styles.sectionIntroText} text-white flex flex-row justify-center gap-2 py-6`}>
                 {filters.map((project, index) => (
                     <AnimationWrapper
                         key={index}
@@ -46,7 +45,7 @@ const Works = () => {
                         whileInView="show"
                         viewport={{ once: true }}
                     >
-                        <ProjectTag
+                        <FilterTag
                             onClick={handleTagChange}
                             name={project}
                             isSelected={tag === project}

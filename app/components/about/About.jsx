@@ -1,29 +1,29 @@
 "use client"
 import React, {useTransition, useState} from 'react'
-import TabButton from "./TabButton";
 import {fadeIn} from "../../../app/utils/motion";
-import {getTabData} from "./constants";
+import {getTabData, filters} from "./constants";
 import {useTranslations} from "next-intl";
 import SectionHeader from "../../../app/components/SectionHeader";
 import AnimationWrapper from "../AnimationWrapper";
 import {styles} from "../../[locale]/styles";
-import TextSplitter from "@/app/components/utils/TextSplitter";
+import TextSplitter from "../../../app/components/utils/TextSplitter";
+import FilterTag from "../../../app/components/utils/FilterTag";
 
 const About = () => {
-    const [tab, setTab] = useState("skills");
+    const [tag, setTag] = useState(filters[0]);
     const [isPending, startTransition] = useTransition();
     const t = useTranslations("AboutSection");
 
     const handleTabChange = (id)  => {
         startTransition(() => {
-            setTab(id);
+            setTag(id);
         });
     }
 
   return (
       <div id="about" className='pt-24'>
           <SectionHeader t={t}/>
-          <section className='grid mt-12 gap-8 relative'>
+          <section className='mt-12 relative'>
                   <AnimationWrapper
                       variants={fadeIn('right', 'tween', 0.5)}
                       initial='hidden'
@@ -35,25 +35,23 @@ const About = () => {
                         className={`${styles.sectionIntroText} max-w-3xl`}
                       />
                   </AnimationWrapper>
+
                   <div className={`${styles.sectionIntroText} text-white flex flex-row justify-center gap-2 py-6`}>
-                      <TabButton
-                          selectTab={() => handleTabChange("skills")}
-                          active={tab === 'skills'}
-                      >
-                          {t("TabData.Skills.Title")}
-                      </TabButton>
-                      <TabButton
-                          selectTab={() => handleTabChange("education")}
-                          active={tab === 'education'}
-                      >
-                          {t("TabData.Education.Title")}
-                      </TabButton>
-                      <TabButton
-                          selectTab={() => handleTabChange("certifications")}
-                          active={tab === 'certifications'}
-                      >
-                          {t("TabData.Certifications.Title")}
-                      </TabButton>
+                      {filters.map((name, index) => (
+                          <AnimationWrapper
+                              key={index}
+                              variants={fadeIn("left", "spring", index * 0.5, 1)}
+                              initial='hidden'
+                              whileInView="show"
+                              viewport={{ once: true }}
+                          >
+                              <FilterTag
+                                  onClick={() => handleTabChange(name)}
+                                  name={name}
+                                  isSelected={tag === name}
+                              />
+                          </AnimationWrapper>
+                      ))}
                   </div>
                   <AnimationWrapper
                       variants={fadeIn('left', 'tween', 0.5)}
@@ -62,11 +60,9 @@ const About = () => {
                       viewport={{ once: true }}
                       className={`${styles.sectionIntroText}`}
                   >
-                      <div className='mt-8'>
-                          {
-                              getTabData(useTranslations("AboutSection.TabData")).find((t) => t.id === tab).content
-                          }
-                      </div>
+                     {
+                          getTabData(useTranslations("AboutSection.TabData")).find((t) => t.id === tag).content
+                     }
                   </AnimationWrapper>
           </section>
       </div>

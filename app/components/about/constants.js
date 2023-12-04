@@ -1,10 +1,10 @@
 import React from "react";
-import {sizes} from "@/app/[locale]/styles";
+import {sizes} from "../../../app/[locale]/styles";
 
 const getTabData = (t) => {
     return [
         {
-            id: "skills",
+            id: filters[0],
             content: (
                 <ul className={`${sizes.baseTextSize} text-white skills-area list-disc list-outside`}>
                     <li>
@@ -50,7 +50,7 @@ const getTabData = (t) => {
             )
         },
         {
-            id: "education",
+            id: filters[1],
             content: (
                 <ul className='text-white list-disc list-outside max-w-3xl'>
                     <li className='mb-5'>
@@ -86,7 +86,7 @@ const getTabData = (t) => {
             )
         },
         {
-            id: "certifications",
+            id: filters[2],
             content: (
                 <ul className='text-secondary list-disc list-outside max-w-3xl'>
                     <li>
@@ -111,5 +111,11 @@ const getTabData = (t) => {
     ]
 }
 
+const filters = [
+    "Skills",
+    "Education",
+    "Certifications"
+]
 
-export {getTabData};
+
+export {getTabData, filters};
