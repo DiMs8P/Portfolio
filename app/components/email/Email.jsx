@@ -7,7 +7,7 @@ import {fadeIn} from "../../../app/utils/motion";
 import {socials} from "./constants";
 import Social from "./Social";
 import AnimationWrapper from "../AnimationWrapper";
-import TextSplitter from "../../../app/utils/TextSplitter";
+import TextSplitter from "../utils/TextSplitter";
 
 
 let EmailStatuses = { SUCCESS: 'success', FAILED: 'failed', WAITING: 'waiting' }

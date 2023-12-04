@@ -15,18 +15,17 @@
   "AboutSection": {
     "SubText": "My story",
     "HeadText": "About me.",
-    "AboutText": "Hello! My name is Dmitry, and I am a passionate developer from Novosibirsk, Russia.\nI am currently delving into the world of programming and mathematics at the Novosibirsk State Technical University, within the Faculty of Applied Mathematics and Computer Science.\nI am drawn to the pursuit of self-improvement and experimenting with Computer Networks and AI",
+    "AboutText": "Hello! My name is Dmitry, and I am a passionate developer from Novosibirsk, Russia.\nI am currently delving into the world of programming and mathematics at the Novosibirsk State Technical University, within the Faculty of Applied Mathematics and Computer Science.\nI am drawn to the pursuit of self-improvement and experimenting with Computer Networks and AI.",
     "TabData": {
       "Skills": {
         "Title": "Skills"
       },
       "Education": {
         "Title": "Education",
-        "University": "Novosibirsk State Technical University. Faculty of Applied Mathematics and Computer Science (I am a fourth-year student)",
+        "University": "I am a fourth-year student at the Novosibirsk Technical University, Faculty of Applied Mathematics and Informatics.",
         "Udemy": {
-          "FirstShooter": "My first acquaintance with Unreal Engine",
-          "Multiplayer": "Only multiplayer part (Unreal Engine)",
-          "Unity": "Only Laser Defender project (Unity)"
+          "FirstShooter": "My first acquaintance with Unreal Engine.",
+          "Multiplayer": "Only multiplayer part."
         }
       },
       "Certifications": {

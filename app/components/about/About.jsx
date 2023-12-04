@@ -7,7 +7,7 @@ import {useTranslations} from "next-intl";
 import SectionHeader from "../../../app/components/SectionHeader";
 import AnimationWrapper from "../AnimationWrapper";
 import {styles} from "../../[locale]/styles";
-import TextSplitter from "@/app/utils/TextSplitter";
+import TextSplitter from "@/app/components/utils/TextSplitter";
 
 const About = () => {
     const [tab, setTab] = useState("skills");
@@ -23,7 +23,7 @@ const About = () => {
   return (
       <div id="about" className='pt-24'>
           <SectionHeader t={t}/>
-          <section className='grid md:grid-cols-2 mt-12 gap-8 relative'>
+          <section className='grid lg:grid-cols-2 mt-12 gap-8 relative'>
                   <AnimationWrapper
                       variants={fadeIn('right', 'tween', 0.5)}
                       initial='hidden'
@@ -32,7 +32,7 @@ const About = () => {
                   >
                       <TextSplitter
                         text={t("AboutText")}
-                        className={`${styles.sectionIntroText} lg:mr-5 max-w-md`}
+                        className={`${styles.sectionIntroText} lg:mr-5 lg:max-w-md`}
                       />
                   </AnimationWrapper>
                   <AnimationWrapper
