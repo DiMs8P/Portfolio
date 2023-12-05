@@ -18,6 +18,10 @@ const projects = (t) => {
                 {
                     name: "Mobile",
                     color: "green-text-gradient",
+                },
+                {
+                    name: "Personal",
+                    color: "pink-text-gradient",
                 }
             ],
             filters: [filters[0], filters[1]],
@@ -36,6 +40,10 @@ const projects = (t) => {
                 {
                     name: "PC",
                     color: "green-text-gradient",
+                },
+                {
+                    name: "Personal",
+                    color: "pink-text-gradient",
                 }
             ],
             filters: [filters[0], filters[1]],
@@ -58,7 +66,7 @@ const projects = (t) => {
                 {
                     name: "Udemy",
                     color: "pink-text-gradient",
-                },
+                }
             ],
             filters: [filters[0], filters[1]],
             image: ShoutThemUp,

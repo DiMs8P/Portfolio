@@ -57,9 +57,9 @@
     "ProjectsText": "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
     "Projects": {
       "SwapAndTap": "A rhythm game like Osu. You need to tap on game elements to the rhythm. The source code was lost, but I still have the APK :)",
-      "TreasureHunting": "Web application that enables users to search for job openings, view estimat",
-      "ShooterGame": "Web application that enables users to search for job openings, view estimat",
-      "LaserDefender": "Web application that enables users to search for job openings, view estimat"
+      "TreasureHunting": "You appear in a random spot within a procedurally generated maze. You need to find a hidden trophy.",
+      "ShooterGame": "Udemy project. My first encounter with Unreal Engine. A third-person shooter with animations, shooting, AI, sounds and more.",
+      "LaserDefender": "Udemy project. Top-down space shooter with coroutines, waypoints, scriptable objects, and more."
     }
   },
 
