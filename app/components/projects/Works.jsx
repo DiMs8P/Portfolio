@@ -58,13 +58,13 @@ const Works = () => {
             >
                 {filteredProjects.map((project, index) => (
                     <AnimationWrapper
-                        key={`project-${index}`}
+                        key={`project-${tag}-${index}`}
                         variants={fadeIn("left", "spring", index * 0.5, 1)}
                         initial='hidden'
                         whileInView="show"
                         viewport={{ once: true }}
                     >
-                        <ProjectCard key={`project-${index}`} index={index} {...project} />
+                        <ProjectCard key={`project-${tag}-${index}`} index={index} {...project} />
                     </AnimationWrapper>
                 ))}
             </div>
