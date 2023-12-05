@@ -1,13 +1,14 @@
 import GithubIcon from "../../../src/github-icon.svg";
-import SwapAndTap from "../../../src/SwapAndTap.jpg";
+import SwapAndTap from "../../../src/Projects/SwapAndTap.jpg";
 import GoogleDrive from "../../../src/GoogleDrive.png";
-import ShoutThemUp from "../../../src/ShoutThemUp.jpg";
-import MazeGenerator from "../../../src/MazeGenerator.png"
+import ShoutThemUp from "../../../src/Projects/ShoutThemUp.jpg";
+import MazeGenerator from "../../../src/Projects/MazeGenerator.png"
+import SpaceXX from "../../../src/Projects/SpaceXX.jpg"
 
 const projects = (t) => {
     return [
         {
-            name: "SwapAndTap",
+            name: "Swap And Tap",
             description: t("SwapAndTap"),
             tags: [
                 {
@@ -25,8 +26,8 @@ const projects = (t) => {
             source_code_link: "https://drive.google.com/drive/folders/1PfrGncdCtt9NgWj2s0_CDAaqpyIEZREp?usp=sharing",
         },
         {
-            name: "TreasureHunting",
-            description: t("ShooterGame"),
+            name: "Treasure Hunting",
+            description: t("TreasureHunting"),
             tags: [
                 {
                     name: "UnrealEngine5",
@@ -43,7 +44,7 @@ const projects = (t) => {
             source_code_link: "https://github.com/DiMs8P/TreasureHunting",
         },
         {
-            name: "ShootThemUp",
+            name: "Shoot Them Up",
             description: t("ShooterGame"),
             tags: [
                 {
@@ -63,6 +64,28 @@ const projects = (t) => {
             image: ShoutThemUp,
             src: GithubIcon,
             source_code_link: "https://github.com/DiMs8P/ShootThemUp",
+        },
+        {
+            name: "Laser Defender",
+            description: t("LaserDefender"),
+            tags: [
+                {
+                    name: "Unity",
+                    color: "blue-text-gradient",
+                },
+                {
+                    name: "PC",
+                    color: "green-text-gradient",
+                },
+                {
+                    name: "Udemy",
+                    color: "pink-text-gradient",
+                },
+            ],
+            filters: [filters[0], filters[2]],
+            image: SpaceXX,
+            src: GithubIcon,
+            source_code_link: "https://github.com/DiMs8P/Space-30XX",
         }
     ];
 }
@@ -70,7 +93,7 @@ const projects = (t) => {
 const filters = [
     "All",
     "Unreal Engine",
-    "Other"
+    "Unity"
 ]
 
 
