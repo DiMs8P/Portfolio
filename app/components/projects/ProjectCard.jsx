@@ -1,6 +1,7 @@
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
 import github from "../../../src/github-icon.svg";
+import TextSplitter from "@/app/components/utils/TextSplitter";
 
 const ProjectCard = ({
                          index,
@@ -44,7 +45,10 @@ const ProjectCard = ({
 
                 <div className='mt-5'>
                     <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-                    <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+                    <TextSplitter
+                        className='mt-2 text-secondary text-[14px]'
+                        text={description}
+                    />
                 </div>
 
                 <div className='mt-4 flex flex-wrap gap-2'>

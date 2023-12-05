@@ -54,12 +54,12 @@
   "ProjectsSection": {
     "SubText": "My Work",
     "HeadText": "Projects.",
-    "ProjectsText": "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
+    "ProjectsText": "Below you can see the projects I've worked on. Some of them were created entirely by me, while others were created as a result of taking courses. Each project is briefly described with links to code repositories.",
     "Projects": {
-      "SwapAndTap": "A rhythm game like Osu. You need to tap on game elements to the rhythm. The source code was lost, but I still have the APK :)",
-      "TreasureHunting": "You appear in a random spot within a procedurally generated maze. You need to find a hidden trophy.",
-      "ShooterGame": "Udemy project. My first encounter with Unreal Engine. A third-person shooter with animations, shooting, AI, sounds and more.",
-      "LaserDefender": "Udemy project. Top-down space shooter with coroutines, waypoints, scriptable objects, and more."
+      "SwapAndTap": "A rhythm game like Osu.\nYou need to tap on game elements to the rhythm. The source code was lost, but I still have the APK and gameplay record :)",
+      "TreasureHunting": "The goal of the project is to experiment with a procedural maze generation algorithm.\nYou appear in a random spot within a procedurally generated maze, and your task is to find a hidden trophy.",
+      "ShooterGame": "Udemy project.\nMy first encounter with Unreal Engine. A third-person shooter with animations, shooting, AI, sounds and more.",
+      "LaserDefender": "Udemy project.\nTop-down space shooter with coroutines, waypoints, scriptable objects, and more."
     }
   },
 
