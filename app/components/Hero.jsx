@@ -8,6 +8,7 @@ import {useTranslations} from "next-intl";
 import {fadeIn} from "../../app/utils/motion";
 import AnimationWrapper from "../../app/components/AnimationWrapper";
 import { Link } from 'react-scroll'
+import NextLink from "next/link";
 
 const Hero = () => {
     const t = useTranslations("HeroSection");
@@ -73,13 +74,16 @@ const Hero = () => {
                            {t("HireButton")}
                        </button>
                     </Link>
-                    <button
-                        className='px-1 py-1 w-full sm:w-fit rounded-full
+                    <NextLink href="https://drive.google.com/file/d/1aibsSLfaOb48vqj2yHxQmrMbqKzhqppP/view?usp=sharing" target="_blank">
+                        <button
+                            className='px-1 py-1 w-full sm:w-fit rounded-full
                         bg-gradient-to-br from-teal-500 via-cyan-500
                         to-blue-500 hover:bg-slate-800 mt-3'
-                    >
-                        <span className='block text-white text-[17px] bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>{t("CVButton")}</span>
-                    </button>
+                        >
+                            <span
+                                className='block text-white text-[17px] bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>{t("CVButton")}</span>
+                        </button>
+                    </NextLink>
                 </AnimationWrapper>
             </div>
             <div className='place-self-center'>
@@ -87,7 +91,7 @@ const Hero = () => {
                     variants={fadeIn('left', 'tween', 0.3)}
                     initial='hidden'
                     whileInView={'show'}
-                    viewport={{ once: true }}
+                    viewport={{once: true}}
                 >
                     <Image
                         src={HeroImage}
