@@ -58,6 +58,8 @@
     "Projects": {
       "SwapAndTap": "A rhythm game like Osu.\nYou need to tap on game elements to the rhythm. The source code was lost, but I still have the APK and gameplay record :)",
       "TreasureHunting": "The goal of the project is to experiment with a procedural maze generation algorithm.\nYou appear in a random spot within a procedurally generated maze, and your task is to find a hidden trophy.",
+      "ForsakenHero": "Behavior tree vs neural network, which is better?\nThe project aims to incorporate a machine learning model into the game and see what comes out of it.",
+      "MysticEchoes": "Top-down game written without any engine in pure C#.\nYour quest is clear: purge every room of its enemies to emerge victorious.",
       "ShooterGame": "Udemy project.\nMy first encounter with Unreal Engine. A third-person shooter with animations, shooting, AI, sounds and more.",
       "LaserDefender": "Udemy project.\nTop-down space shooter with coroutines, waypoints, scriptable objects, and more."
     }
