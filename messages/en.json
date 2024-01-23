@@ -83,7 +83,8 @@
         "Example": "A Superhero's Hello"
       },
       "SendButton": "Send Message",
-      "SuccessSend": "Achievement unlocked: Contacted you!",
+      "SuccessSend": "Achievement unlocked: Contact!",
+      "WaitingSend": "Launching digital postmen...",
       "FailedSend": "Something went wrong, but you can use social media!"
     }
   }

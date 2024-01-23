@@ -10,11 +10,11 @@ import AnimationWrapper from "../AnimationWrapper";
 import TextSplitter from "../utils/TextSplitter";
 
 
-let EmailStatuses = { SUCCESS: 'success', FAILED: 'failed', WAITING: 'waiting' }
+let EmailStatuses = { NONE: "none", SUCCESS: 'success', FAILED: 'failed', WAITING: 'waiting' }
 
 const Email = () => {
     const t = useTranslations("EmailSection");
-    const [EmailStatus, setEmailStatus] = useState(EmailStatuses.WAITING);
+    const [EmailStatus, setEmailStatus] = useState(EmailStatuses.NONE);
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = {
@@ -157,6 +157,13 @@ const Email = () => {
                           EmailStatus === EmailStatuses.FAILED && (
                               <p className={`${sizes.baseTextSize} text-red-500 mt-2`}>
                                   {t("Form.FailedSend")}
+                              </p>
+                          )
+                      }
+                      {
+                          EmailStatus === EmailStatuses.WAITING && (
+                              <p className={`${sizes.baseTextSize} text-orange-500 mt-2`}>
+                                  {t("Form.WaitingSend")}
                               </p>
                           )
                       }
