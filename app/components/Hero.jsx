@@ -74,7 +74,7 @@ const Hero = () => {
                            {t("HireButton")}
                        </button>
                     </Link>
-                    <NextLink href="https://drive.google.com/file/d/1aibsSLfaOb48vqj2yHxQmrMbqKzhqppP/view?usp=sharing" target="_blank">
+                    <NextLink href="https://drive.google.com/file/d/1rgNHCEScTUJR8h6lvYnOfwalAEl3KoZq/view?usp=sharing" target="_blank">
                         <button
                             className='px-1 py-1 w-full sm:w-fit rounded-full
                         bg-gradient-to-br from-teal-500 via-cyan-500
